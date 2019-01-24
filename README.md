@@ -1,2 +1,13 @@
 # laravel-fatture-in-cloud
-An integration plugin with Fatture in Cloud Api written in Laravel PHP
+```bash
+composer require offlineagency/laravel-fatture-in-cloud
+```
+
+# To do - Align Fields with last api version
+- [x] Nuova Fattura
+- [ ] Importa Fattura
+- [ ] Lista Fattura
+
+
+## Next
+- [ ] Make Test

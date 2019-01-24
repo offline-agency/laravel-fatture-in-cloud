@@ -1,0 +1,37 @@
+{
+    "name": "offline-agency/laravel-fatture-in-cloud",
+    "description": "An integration plugin with Fatture in Cloud Api written in Laravel PHP",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel","integration","api","fatture in cloud"],
+    "authors": [
+        {
+            "name": "Offline Agency",
+            "email": "info@offlineagency.it"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "php": "^7.2",
+        "illuminate/support": "*",
+        "laravel/passport": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "OfflineAgency\\FattureInCloud\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OfflineAgency\\FattureInCloud\\FattureInCloudServiceProvider"
+            ],
+            "aliases": {
+                "FattureInCloud": "GarbinLuca\\FattureInCloud\\FattureInCloudFacade"
+            }
+        }
+    }
+}
