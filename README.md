@@ -1,6 +1,6 @@
 # laravel-fatture-in-cloud
 ```bash
-composer require offlineagency/laravel-fatture-in-cloud
+composer require offline-agency/laravel-fatture-in-cloud
 ```
 
 # To do - Align Fields with last api version
