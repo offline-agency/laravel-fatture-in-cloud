@@ -9,7 +9,7 @@ class FattureInCloudServiceProvider extends ServiceProvider{
     public function boot() {
 
         $this->publishes([
-            __DIR__ . '/../config/fattureincloud.php' => config_path('fattureincloud.php'),
+            __DIR__ . '/../config/fatture-in-cloud.php' => config_path('fatture-in-cloud.php'),
         ], 'config');
 
     }
@@ -17,7 +17,7 @@ class FattureInCloudServiceProvider extends ServiceProvider{
     public function register() {
 
         $this->mergeConfigFrom(
-            __DIR__.'/../config/fattureincloud.php', 'fattureincloud'
+            __DIR__.'/../config/fatture-in-cloud.php', 'fattureincloud'
         );
 
         $this->app->singleton('fattureincloud', function ($app) {

@@ -20,7 +20,7 @@ class Auth {
     public function __construct($apiUid = false, $apiKey = false)
     {
 
-        $this->errors = config('fattureincloud.errors');
+        $this->errors = config('fatture-in-cloud.errors');
 
         if (empty($apiUid) || empty($apiKey)) {
 
@@ -48,7 +48,7 @@ class Auth {
 
         try {
 
-            $url = config('fattureincloud.endpoint') . $url;
+            $url = config('fatture-in-cloud.endpoint') . $url;
 
             $options = [
                 "http" => [
@@ -66,8 +66,8 @@ class Auth {
         } catch(Exception $e) {
 
             return json_encode([
-               'error' => $e->getMessage(),
-               'code' => $e->getCode()
+                'error' => $e->getMessage(),
+                'code' => $e->getCode()
             ]);
 
         }

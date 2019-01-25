@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'api_uid' => env('FATTURE_CLOUD_API_UID'),
+    'api_key' => env('FATTURE_CLOUD_API_KEY'),
     "endpoint" => "https://api.fattureincloud.it/v1/",
     "errors" => [
         "0" => [
