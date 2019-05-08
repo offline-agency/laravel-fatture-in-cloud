@@ -44,6 +44,10 @@ return [
         "2006" => [
             "code" => 403,
             "message" => "L'accesso ai dati richiesti è ristretto."
+        ],
+        "4001" => [
+            "code" => 420,
+            "message" => "Non è possibile completare la richiesta perché è stato raggiunto il limite massimo di anagrafiche."
         ]
     ]
 ];
