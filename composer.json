@@ -3,6 +3,7 @@
     "description": "An integration plugin with Fatture in Cloud Api written in Laravel PHP",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "keywords": ["laravel","integration","api","fatture in cloud"],
     "authors": [
         {
