@@ -2,10 +2,7 @@
 
 namespace OfflineAgency\FattureInCloud\Entities;
 
-use OfflineAgency\FattureInCloud\Entities\Anagrafica;
-
-class Fornitori extends Anagrafica {
-
+class Fornitori extends Anagrafica
+{
     protected $soggetto = 'fornitori';
-
 }
