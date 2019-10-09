@@ -4,64 +4,61 @@ namespace OfflineAgency\FattureInCloud\Requests;
 
 class Prodotti
 {
-    
-    public static function lista($data = []) {
+    public static function lista($data = [ ])
+    {
+        $allowed = [ 'filtro', 'id', 'nome', 'cod', 'desc', 'categoria', 'pagina' ];
 
-        $allowed = ['filtro','id','nome','cod','desc','categoria', 'pagina'];
+        $required = [ ];
 
-        $required = [];
-    
-        return Common::parseData($data,$allowed,$required);
+        return Common::parseData($data, $allowed, $required);
     }
 
+    public static function nuovo($data = [ ])
+    {
+        $allowed = [ 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
+            'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
 
-    public static function nuovo($data = []) {
-    
-        $allowed = [ 'cod','nome','desc','prezzo_ivato','prezzo_netto','prezzo_lordo','costo','cod_iva','um',
-            'categoria','note', 'magazzino','giacenza_iniziale' ];
+        $required = [ 'nome' ];
 
-        $required = ['nome'];
-
-        return Common::parseData($data,$allowed,$required);
+        return Common::parseData($data, $allowed, $required);
     }
 
     /**
      * @param       $type, lista
      * @param array $data
      *
-     * @return array
      * @throws \Exception
+     *
+     * @return array
      */
-    public static function importa($type, $data = []) {
+    public static function importa($type, $data = [ ])
+    {
+        $allowed = [ 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
+            'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
 
-        $allowed = [ 'cod','nome','desc','prezzo_ivato','prezzo_netto','prezzo_lordo','costo','cod_iva','um',
-            'categoria','note','magazzino','giacenza_iniziale'];
+        $required = [ 'nome' ];
 
-        $required = ['nome'];
-
-        if($type == 'singolo') {
-            return Common::parseData($data,$allowed,$required);
-        }
-        else {
-            return Common::parseArrayData($data,$allowed,$required);
+        if ($type == 'singolo') {
+            return Common::parseData($data, $allowed, $required);
+        } else {
+            return Common::parseArrayData($data, $allowed, $required);
         }
     }
 
+    public static function modifica($data = [ ])
+    {
+        $allowed = [ 'id', 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
+            'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
+        $required = [ 'id' ];
 
-    public static function modifica($data = []) {
-        $allowed = [ 'id', 'cod','nome','desc','prezzo_ivato','prezzo_netto','prezzo_lordo','costo','cod_iva','um',
-            'categoria','note','magazzino','giacenza_iniziale' ];
-        $required = ['id'];
-
-        return Common::parseData($data,$allowed,$required);
+        return Common::parseData($data, $allowed, $required);
     }
 
+    public static function elimina($data = [ ])
+    {
+        $allowed = [ 'id' ];
+        $required = [ 'id' ];
 
-
-    public static function elimina($data = []) {
-        $allowed = ['id'];
-        $required = ['id'];
-
-        return Common::parseData($data,$allowed,$required);
+        return Common::parseData($data, $allowed, $required);
     }
 }
