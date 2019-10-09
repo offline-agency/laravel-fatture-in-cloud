@@ -17,7 +17,7 @@ class Common
     public static function filterData($data, $allowed)
     {
         if (!$data || !$allowed) {
-            return [];
+            return [ ];
         }
 
         return array_intersect_key($data, array_flip($allowed));
@@ -30,10 +30,10 @@ class Common
      */
     public static function array_keys_exist(array $needles, array $haystack)
     {
-        $missing = [];
+        $missing = [ ];
         foreach ($needles as $needle) {
             if (!array_key_exists($needle, $haystack)) {
-                $missing[] = $needle;
+                $missing[ ] = $needle;
             }
         }
 
@@ -54,13 +54,13 @@ class Common
 
     public static function parseArrayData($array, $allowed, $required)
     {
-        $lista = [];
+        $lista = [ ];
         foreach ($array as $data) {
             $filtered = self::filterData($data, $allowed);
             $missing = self::array_keys_exist($required, $data);
 
             if (count($missing) == 0) {
-                $lista[] = $filtered;
+                $lista[ ] = $filtered;
             }
         }
 

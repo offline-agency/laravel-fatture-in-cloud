@@ -9,35 +9,35 @@ class Anagrafica extends FattureInCloud
 {
     protected $soggetto = 'clienti';
 
-    public function lista($data = [])
+    public function lista($data = [ ])
     {
         Request::lista($data);
 
         return $this->auth->post("{$this->soggetto}/lista", $data);
     }
 
-    public function nuovo($data = [])
+    public function nuovo($data = [ ])
     {
         Request::nuovo($data);
 
         return $this->auth->post("{$this->soggetto}/nuovo", $data);
     }
 
-    public function importa($data = [])
+    public function importa($data = [ ])
     {
         Request::importa($data);
 
         return $this->auth->post("{$this->soggetto}/importa", $data);
     }
 
-    public function modifica($data = [])
+    public function modifica($data = [ ])
     {
         Request::modifica($data);
 
         return $this->auth->post("{$this->soggetto}/modifica", $data);
     }
 
-    public function elimina($data = [])
+    public function elimina($data = [ ])
     {
         Request::elimina($data);
 
