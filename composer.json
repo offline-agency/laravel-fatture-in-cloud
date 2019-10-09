@@ -34,5 +34,8 @@
                 "FattureInCloud": "GarbinLuca\\FattureInCloud\\FattureInCloudFacade"
             }
         }
+    },
+    "require-dev": {
+        "laravel/homestead": "^9.2"
     }
 }
