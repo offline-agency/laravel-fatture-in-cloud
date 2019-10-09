@@ -6,8 +6,8 @@ use Exception;
 
 class Auth
 {
-    private $errors = [];
-    private $params = [];
+    private $errors = [ ];
+    private $params = [ ];
 
     /**
      * Auth constructor.
@@ -40,7 +40,7 @@ class Auth
      *
      * @return mixed|string
      */
-    private function call($url = '', $data = [], $method = 'post')
+    private function call($url = '', $data = [ ], $method = 'post')
     {
         try {
             $url = config('fatture-in-cloud.endpoint').$url;
@@ -76,7 +76,7 @@ class Auth
     {
         $json = json_decode($response);
         if (isset($json->error)) {
-            throw new \Exception($json->error, $this->errors[$json->error_code]['code']);
+            throw new \Exception($json->error, $this->errors[ $json->error_code ][ 'code' ]);
         }
 
         return $json;
@@ -90,7 +90,7 @@ class Auth
      *
      * @return mixed|string
      */
-    public function post($path, $data = [])
+    public function post($path, $data = [ ])
     {
         $params = array_merge($this->params, $data);
 

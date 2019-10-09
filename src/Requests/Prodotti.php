@@ -4,21 +4,21 @@ namespace OfflineAgency\FattureInCloud\Requests;
 
 class Prodotti
 {
-    public static function lista($data = [])
+    public static function lista($data = [ ])
     {
-        $allowed = ['filtro', 'id', 'nome', 'cod', 'desc', 'categoria', 'pagina'];
+        $allowed = [ 'filtro', 'id', 'nome', 'cod', 'desc', 'categoria', 'pagina' ];
 
-        $required = [];
+        $required = [ ];
 
         return Common::parseData($data, $allowed, $required);
     }
 
-    public static function nuovo($data = [])
+    public static function nuovo($data = [ ])
     {
-        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
+        $allowed = [ 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
             'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
 
-        $required = ['nome'];
+        $required = [ 'nome' ];
 
         return Common::parseData($data, $allowed, $required);
     }
@@ -31,12 +31,12 @@ class Prodotti
      *
      * @return array
      */
-    public static function importa($type, $data = [])
+    public static function importa($type, $data = [ ])
     {
-        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
+        $allowed = [ 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
             'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
 
-        $required = ['nome'];
+        $required = [ 'nome' ];
 
         if ($type == 'singolo') {
             return Common::parseData($data, $allowed, $required);
@@ -45,19 +45,19 @@ class Prodotti
         }
     }
 
-    public static function modifica($data = [])
+    public static function modifica($data = [ ])
     {
-        $allowed = ['id', 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
+        $allowed = [ 'id', 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
             'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
-        $required = ['id'];
+        $required = [ 'id' ];
 
         return Common::parseData($data, $allowed, $required);
     }
 
-    public static function elimina($data = [])
+    public static function elimina($data = [ ])
     {
-        $allowed = ['id'];
-        $required = ['id'];
+        $allowed = [ 'id' ];
+        $required = [ 'id' ];
 
         return Common::parseData($data, $allowed, $required);
     }
