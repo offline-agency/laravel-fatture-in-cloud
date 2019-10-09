@@ -7,7 +7,7 @@ use OfflineAgency\FattureInCloud\Requests\Account as Request;
 
 class Account extends FattureInCloud
 {
-    public function getInfo($data = [ 'nome' ])
+    public function getInfo($data = ['nome'])
     {
         Request::info($data);
 

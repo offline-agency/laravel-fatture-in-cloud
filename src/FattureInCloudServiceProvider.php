@@ -19,7 +19,7 @@ class FattureInCloudServiceProvider extends ServiceProvider
             __DIR__.'/../config/fatture-in-cloud.php', 'fatture-in-cloud'
         );
 
-        $this->app->singleton('fatture-in-cloud', function() {
+        $this->app->singleton('fatture-in-cloud', function () {
             return new FattureInCloud();
         });
     }

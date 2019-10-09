@@ -13,7 +13,7 @@ class Fatture extends Documenti
      *
      * @return mixed
      */
-    public function pdf($data = [ ])
+    public function pdf($data = [])
     {
         Request::dettagli($data);
         $response = $this->auth->post("{$this->docType}/dettagli", $data);
