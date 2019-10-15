@@ -24,3 +24,6 @@ Vagrantfile
 aliases
 after.sh
 .vagrant/
+
+# PHPUnit
+.phpunit.result.cache
