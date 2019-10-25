@@ -21,6 +21,10 @@ Offline Agency is a web design agency based in Padua, Italy. You'll find an over
 
 ## Installation and usage
 
+```bash
+composer require offline-agency/laravel-fatture-in-cloud
+```
+
 You'll find installation instructions and full documentation on https://docs.offlineagency.com/laravel-fatture-in-cloud/.
 
 ## To do
