@@ -4,16 +4,16 @@ namespace OfflineAgency\FattureInCloud\Requests;
 
 class Anagrafica
 {
-    public static function lista($data = [])
+    public static function lista($data = [ ])
     {
-        $allowed = ['filtro', 'id', 'nome', 'cf', 'piva', 'pagina'];
+        $allowed = [ 'filtro', 'id', 'nome', 'cf', 'piva', 'pagina' ];
 
-        $required = [];
+        $required = [ ];
 
         return Common::parseData($data, $allowed, $required);
     }
 
-    public static function nuovo($data = [])
+    public static function nuovo($data = [ ])
     {
         $allowed = [
             'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
@@ -21,7 +21,7 @@ class Anagrafica
             'cod_iva_default', 'extra', 'PA', 'PA_codice',
         ];
 
-        $required = ['nome'];
+        $required = [ 'nome' ];
 
         return Common::parseData($data, $allowed, $required);
     }
@@ -34,7 +34,7 @@ class Anagrafica
      *
      * @return array
      */
-    public static function importa($type, $data = [])
+    public static function importa($type, $data = [ ])
     {
         $allowed = [
             'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
@@ -42,7 +42,7 @@ class Anagrafica
             'cod_iva_default', 'extra', 'PA', 'PA_codice',
         ];
 
-        $required = ['nome'];
+        $required = [ 'nome' ];
 
         if ($type == 'singolo') {
             return Common::parseData($data, $allowed, $required);
@@ -51,7 +51,7 @@ class Anagrafica
         }
     }
 
-    public static function modifica($data = [])
+    public static function modifica($data = [ ])
     {
         $allowed = [
             'id', 'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
@@ -59,18 +59,18 @@ class Anagrafica
             'cod_iva_default', 'extra', 'PA', 'PA_codice',
         ];
 
-        $required = ['id'];
+        $required = [ 'id' ];
 
         return Common::parseData($data, $allowed, $required);
     }
 
-    public static function elimina($data = [])
+    public static function elimina($data = [ ])
     {
         $allowed = [
             'id',
         ];
 
-        $required = ['id'];
+        $required = [ 'id' ];
 
         return Common::parseData($data, $allowed, $required);
     }
