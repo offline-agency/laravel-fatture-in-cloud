@@ -16,10 +16,10 @@ class Anagrafica
     public static function nuovo($data = [])
     {
         $allowed = [
-                'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
-                'indirizzo_extra', 'paese', 'mail', 'tel', 'fax', 'piva', 'cf', 'termini_pagamento', 'pagamento_fine_mese',
-                'cod_iva_default', 'extra', 'PA', 'PA_codice',
-            ];
+            'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
+            'indirizzo_extra', 'paese', 'mail', 'tel', 'fax', 'piva', 'cf', 'termini_pagamento', 'pagamento_fine_mese',
+            'cod_iva_default', 'extra', 'PA', 'PA_codice',
+        ];
 
         $required = ['nome'];
 
@@ -37,10 +37,10 @@ class Anagrafica
     public static function importa($type, $data = [])
     {
         $allowed = [
-                'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
-                'indirizzo_extra', 'paese', 'mail', 'tel', 'fax', 'piva', 'cf', 'termini_pagamento', 'pagamento_fine_mese',
-                'cod_iva_default', 'extra', 'PA', 'PA_codice',
-            ];
+            'nome', 'referente', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
+            'indirizzo_extra', 'paese', 'mail', 'tel', 'fax', 'piva', 'cf', 'termini_pagamento', 'pagamento_fine_mese',
+            'cod_iva_default', 'extra', 'PA', 'PA_codice',
+        ];
 
         $required = ['nome'];
 
