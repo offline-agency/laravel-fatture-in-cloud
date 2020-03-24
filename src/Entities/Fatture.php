@@ -2,6 +2,7 @@
 
 namespace OfflineAgency\FattureInCloud\Entities;
 
+use Exception;
 use OfflineAgency\FattureInCloud\Requests\Documenti as Request;
 
 class Fatture extends Documenti
@@ -12,6 +13,7 @@ class Fatture extends Documenti
      * @param array $data
      *
      * @return mixed
+     * @throws Exception
      */
     public function pdf($data = [])
     {
