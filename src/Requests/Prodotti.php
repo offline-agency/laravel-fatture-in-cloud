@@ -2,8 +2,15 @@
 
 namespace OfflineAgency\FattureInCloud\Requests;
 
+use Exception;
+
 class Prodotti
 {
+    /**
+     * @param array $data
+     * @return array
+     * @throws Exception
+     */
     public static function lista($data = [])
     {
         $allowed = ['filtro', 'id', 'nome', 'cod', 'desc', 'categoria', 'pagina'];
@@ -13,6 +20,11 @@ class Prodotti
         return Common::parseData($data, $allowed, $required);
     }
 
+    /**
+     * @param array $data
+     * @return array
+     * @throws Exception
+     */
     public static function nuovo($data = [])
     {
         $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
@@ -23,13 +35,12 @@ class Prodotti
         return Common::parseData($data, $allowed, $required);
     }
 
+
     /**
-     * @param       $type, lista
+     * @param $type
      * @param array $data
-     *
-     * @throws \Exception
-     *
      * @return array
+     * @throws Exception
      */
     public static function importa($type, $data = [])
     {
@@ -45,6 +56,11 @@ class Prodotti
         }
     }
 
+    /**
+     * @param array $data
+     * @return array
+     * @throws \Exception
+     */
     public static function modifica($data = [])
     {
         $allowed = ['id', 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
@@ -54,6 +70,11 @@ class Prodotti
         return Common::parseData($data, $allowed, $required);
     }
 
+    /**
+     * @param array $data
+     * @return array
+     * @throws Exception
+     */
     public static function elimina($data = [])
     {
         $allowed = ['id'];

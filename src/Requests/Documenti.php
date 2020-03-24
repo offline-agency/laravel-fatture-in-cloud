@@ -2,12 +2,14 @@
 
 namespace OfflineAgency\FattureInCloud\Requests;
 
+use Exception;
+
 class Documenti
 {
     /**
      * @param array $data
-     *
      * @return array
+     * @throws Exception
      */
     public static function lista($data = [])
     {
@@ -21,8 +23,8 @@ class Documenti
 
     /**
      * @param array $data
-     *
      * @return array
+     * @throws Exception
      */
     public static function dettagli($data = [])
     {
@@ -34,8 +36,8 @@ class Documenti
 
     /**
      * @param array $data
-     *
      * @return array
+     * @throws Exception
      */
     public static function nuovo($data = [])
     {
@@ -55,37 +57,9 @@ class Documenti
     }
 
     /**
-     * @param       $type singolo, lista
      * @param array $data
-     *
-     * @throws \Exception
-     *
      * @return array
-     */
-    /* public static function importa($type, $data = []) {
-
-         $allowed = [ 'id_cliente','nome', 'indirizzo_via', 'indirizzo_cap', 'indirizzo_citta', 'indirizzo_provincia',
-             'indirizzo_extra', 'paese', 'lingua', 'cf', 'piva', 'anno_competenza', 'numero', 'data', 'valuta',
-             'valuta_cambio', 'prezzi_ivati', 'rivalsa', 'cassa', 'rit_acconto', 'imponibile_ritenuta', 'rit_altra',
-             'marca_bollo', 'oggetto_fattura', 'oggetto_interno', 'centro_ricavo', 'note', 'nascondi_scadenza', 'ddt',
-             'ftacc', 'mostra_info_pagamento', 'id_template', 'ddt_id_template', 'ftacc_id_template', 'metodo_pagamento',
-             'metodo_titoloN','metodo_descN','lista_articoli','lista_pagamenti','ddt_numero','ddt_data','ddt_colli',
-             'ddt_peso','ddt_causale', 'ddt_luogo','ddt_trasportatore','ddt_annotazioni'];
-
-         $required = ['nome'];
-
-         if($type == 'singolo') {
-             return Common::parseData($data,$allowed,$required);
-         }
-         else {
-             return Common::parseArrayData($data,$allowed,$required);
-         }
-     }*/
-
-    /**
-     * @param array $data
-     *
-     * @return array
+     * @throws Exception
      */
     public static function modifica($data = [])
     {
@@ -105,8 +79,8 @@ class Documenti
 
     /**
      * @param array $data
-     *
      * @return array
+     * @throws Exception
      */
     public static function elimina($data = [])
     {
@@ -118,8 +92,8 @@ class Documenti
 
     /**
      * @param array $data
-     *
      * @return array
+     * @throws Exception
      */
     public static function info($data = [])
     {

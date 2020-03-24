@@ -7,6 +7,10 @@ use OfflineAgency\FattureInCloud\Requests\Account as Request;
 
 class Account extends FattureInCloud
 {
+    /**
+     * @param array $data
+     * @return mixed|string
+     */
     public function getInfo($data = ['nome'])
     {
         Request::info($data);

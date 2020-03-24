@@ -14,6 +14,11 @@ class Common
         throw new \Exception('Parametri obbligatori mancanti'.(($params) ? ': '.implode(', ', $params) : '.'));
     }
 
+    /**
+     * @param $data
+     * @param $allowed
+     * @return array
+     */
     public static function filterData($data, $allowed)
     {
         if (!$data || !$allowed) {
@@ -40,6 +45,13 @@ class Common
         return $missing;
     }
 
+    /**
+     * @param $data
+     * @param $allowed
+     * @param $required
+     * @return array
+     * @throws \Exception
+     */
     public static function parseData($data, $allowed, $required)
     {
         $data = self::filterData($data, $allowed);
@@ -52,6 +64,12 @@ class Common
         return $data;
     }
 
+    /**
+     * @param $array
+     * @param $allowed
+     * @param $required
+     * @return array
+     */
     public static function parseArrayData($array, $allowed, $required)
     {
         $lista = [];
