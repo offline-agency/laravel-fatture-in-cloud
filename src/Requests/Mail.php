@@ -8,8 +8,10 @@ class Mail
 {
     /**
      * @param array $data
-     * @return array
+     *
      * @throws Exception
+     *
+     * @return array
      */
     public static function lista($data = [])
     {

@@ -6,6 +6,7 @@ class Acquisti
 {
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function lista($data = [])
@@ -19,6 +20,7 @@ class Acquisti
 
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function dettagli($data = [])

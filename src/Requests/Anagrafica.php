@@ -6,6 +6,7 @@ class Anagrafica
 {
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function lista($data = [])
@@ -19,6 +20,7 @@ class Anagrafica
 
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function nuovo($data = [])
@@ -61,6 +63,7 @@ class Anagrafica
 
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function modifica($data = [])
@@ -78,6 +81,7 @@ class Anagrafica
 
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function elimina($data = [])

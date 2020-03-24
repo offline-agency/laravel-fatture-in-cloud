@@ -17,6 +17,7 @@ class Common
     /**
      * @param $data
      * @param $allowed
+     *
      * @return array
      */
     public static function filterData($data, $allowed)
@@ -49,8 +50,10 @@ class Common
      * @param $data
      * @param $allowed
      * @param $required
-     * @return array
+     *
      * @throws \Exception
+     *
+     * @return array
      */
     public static function parseData($data, $allowed, $required)
     {
@@ -68,6 +71,7 @@ class Common
      * @param $array
      * @param $allowed
      * @param $required
+     *
      * @return array
      */
     public static function parseArrayData($array, $allowed, $required)

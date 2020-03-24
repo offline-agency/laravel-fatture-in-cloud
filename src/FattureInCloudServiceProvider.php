@@ -16,7 +16,8 @@ class FattureInCloudServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/fatture-in-cloud.php', 'fatture-in-cloud'
+            __DIR__.'/../config/fatture-in-cloud.php',
+            'fatture-in-cloud'
         );
 
         $this->app->singleton('fatture-in-cloud', function () {
