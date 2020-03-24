@@ -58,7 +58,7 @@ class Auth
 
             return self::parseResponse($result);
         } catch (Exception $e) {
-            return [
+            return (object)[
                 'error'   => $e->getMessage(),
                 'code'    => $e->getCode(),
                 'success' => false,
