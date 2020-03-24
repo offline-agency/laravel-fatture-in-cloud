@@ -17,7 +17,7 @@ class Auth
      *
      * @throws Exception
      */
-    public function __construct($apiUid = false, $apiKey = false)
+    public function __construct($apiUid = '', $apiKey = '')
     {
         $this->errors = config('fatture-in-cloud.errors');
 
@@ -31,24 +31,24 @@ class Auth
         ];
     }
 
+
     /**
      * Exec API call.
      *
      * @param string $url
-     * @param array  $data
+     * @param array $data
      * @param string $method
-     *
-     * @return mixed|string
+     * @return array|mixed
      */
     private function call($url = '', $data = [], $method = 'post')
     {
         try {
-            $url = config('fatture-in-cloud.endpoint').$url;
+            $url = config('fatture-in-cloud.endpoint') . $url;
 
             $options = [
                 'http' => [
-                    'header'  => "Content-type: text/json\r\n",
-                    'method'  => $method,
+                    'header' => "Content-type: text/json\r\n",
+                    'method' => $method,
                     'content' => json_encode($data),
                 ],
             ];
@@ -58,10 +58,11 @@ class Auth
 
             return self::parseResponse($result);
         } catch (Exception $e) {
-            return json_encode([
+            return [
                 'error' => $e->getMessage(),
-                'code'  => $e->getCode(),
-            ]);
+                'code' => $e->getCode(),
+                'success' => false
+            ];
         }
     }
 
@@ -71,6 +72,7 @@ class Auth
      * @param $response
      *
      * @return mixed
+     * @throws Exception
      */
     private function parseResponse($response)
     {
