@@ -6,6 +6,7 @@ class Account
 {
     /**
      * @param array $data
+     *
      * @return array
      */
     public static function info($data = [])

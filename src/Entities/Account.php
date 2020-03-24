@@ -9,6 +9,7 @@ class Account extends FattureInCloud
 {
     /**
      * @param array $data
+     *
      * @return mixed|string
      */
     public function getInfo($data = ['nome'])
