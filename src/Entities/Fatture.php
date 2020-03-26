@@ -12,8 +12,9 @@ class Fatture extends Documenti
     /**
      * @param array $data
      *
-     * @return mixed
      * @throws Exception
+     *
+     * @return mixed
      */
     public function pdf($data = [])
     {
