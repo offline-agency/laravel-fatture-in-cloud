@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.3",
     "ext-json": "*",
     "illuminate/container": "^8.9.0",
     "illuminate/database": "^8.9.0",
