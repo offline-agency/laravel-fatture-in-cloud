@@ -27,17 +27,6 @@ composer require offline-agency/laravel-fatture-in-cloud
 
 You'll find installation instructions and full documentation on https://docs.offlineagency.com/laravel-fatture-in-cloud/.
 
-## To do
-
-Align Fields with last api version:
-
-- [x] Nuova Fattura
-- [ ] Importa Fattura
-- [ ] Lista Fattura
-
-Next:
-
-- [ ] Make Test
 
 ## Testing
 
@@ -54,26 +43,6 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ## Security
 
 If you discover any security-related issues, please email <support@offlineagency.com> instead of using the issue tracker.
-
-## Homestead Environment
-
-An optional Homestead per project virtual machine environment has been included with this project, for instructions on installing Laravel Homestead with Vagrant see [First Steps](https://laravel.com/docs/master/homestead#first-steps).
-
-Once vagrant is installed, from the project directory, run:
-
-### Mac / Linux
-
-```bash
-php vendor/bin/homestead make
-```
-
-### Windows
-
-```bash
-vendor\\bin\\homestead make
-```
-
-Next, run the `vagrant up` command in your terminal. You can SSH into your virtual machine by issuing the `vagrant ssh` terminal command from your project directory. For full instructions on how to access the project using Homestead see the [Laravel Homestead documentation](https://laravel.com/docs/master/homestead).
 
 ## Credits
 
