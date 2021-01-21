@@ -22,7 +22,7 @@ class Common
      */
     public static function filterData($data, $allowed)
     {
-        if (!$data || !$allowed) {
+        if (! $data || ! $allowed) {
             return [];
         }
 
@@ -38,7 +38,7 @@ class Common
     {
         $missing = [];
         foreach ($needles as $needle) {
-            if (!array_key_exists($needle, $haystack)) {
+            if (! array_key_exists($needle, $haystack)) {
                 $missing[] = $needle;
             }
         }
