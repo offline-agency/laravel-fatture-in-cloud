@@ -13,7 +13,7 @@ class FattureInCloud
      */
     public function __construct()
     {
-        $this->auth = new Auth(config('fatture-in-cloud.api_uid'), config('fatture-in-cloud.api_key'));
+        $this->auth = app(Auth::class, ['apiUid' => config('fatture-in-cloud.api_uid'), 'apiKey' => config('fatture-in-cloud.api_key')]);
     }
 
     /**
