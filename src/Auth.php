@@ -3,6 +3,8 @@
 namespace OfflineAgency\FattureInCloud;
 
 use Exception;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class Auth
 {
@@ -40,23 +42,25 @@ class Auth
      *
      * @return array|mixed
      */
-    private function call($url = '', $data = [], $method = 'post')
+    private function call($url = '', $data = [], $method = 'POST')
     {
         try {
             $url = config('fatture-in-cloud.endpoint').$url;
-
-            $options = [
-                'http' => [
-                    'header'  => "Content-type: text/json\r\n",
-                    'method'  => $method,
-                    'content' => json_encode($data),
-                ],
-            ];
-
-            $context = stream_context_create($options);
-            $result = file_get_contents($url, false, $context);
-
-            return self::parseResponse($result);
+            $method = Str::lower($method);
+            if($method === 'post'){
+              $result = Http::withHeaders([
+                "Content-type" => 'text/json'
+              ])
+                ->post($url,$data );
+            }else if($method === 'get'){
+              $result = Http::withHeaders([
+                "Content-type" => 'text/json'
+              ])
+                ->get($url,$data );
+            }else{
+              throw new Exception('Unknown method ' . $method);
+            }
+            return $result->json();
         } catch (Exception $e) {
             return (object) [
                 'error'   => $e->getMessage(),
