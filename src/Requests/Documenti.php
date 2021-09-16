@@ -7,11 +7,10 @@ use Exception;
 class Documenti
 {
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function lista($data = [])
     {
@@ -24,11 +23,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function dettagli($data = [])
     {
@@ -39,11 +37,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function nuovo($data = [])
     {
@@ -63,11 +60,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function modifica($data = [])
     {
@@ -86,11 +82,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function elimina($data = [])
     {
@@ -101,16 +96,43 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function info($data = [])
     {
         $allowed = ['anno_competenza'];
         $required = ['anno_competenza'];
+
+        return Common::parseData($data, $allowed, $required);
+    }
+
+    /**
+     * @param  array  $data
+     * @return array
+     *
+     * @throws Exception
+     */
+    public static function infoMail($data = [])
+    {
+        $allowed = ['id', 'token'];
+        $required = [];
+
+        return Common::parseData($data, $allowed, $required);
+    }
+
+    /**
+     * @param  array  $data
+     * @return array
+     *
+     * @throws Exception
+     */
+    public static function inviaMail($data = [])
+    {
+        $allowed = ['mail_mittente', 'mail_destinatario', 'oggetto', 'messaggio', 'id', 'token', 'includi_documento', 'invia_ddt', 'invia_fa', 'includi_allegato', 'invia_copia', 'allega_pdf'];
+        $required = ['mail_mittente', 'mail_destinatario', 'oggetto', 'messaggio'];
 
         return Common::parseData($data, $allowed, $required);
     }

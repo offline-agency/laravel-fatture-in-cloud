@@ -7,8 +7,7 @@ use Exception;
 class Acquisti
 {
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      * @throws Exception
      */
@@ -22,8 +21,7 @@ class Acquisti
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      * @throws Exception
      */
