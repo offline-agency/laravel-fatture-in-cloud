@@ -131,7 +131,7 @@ class Documenti
      */
     public static function inviaMail($data = [])
     {
-        $allowed = ['id', 'token', 'includi_documento', 'invia_ddt', 'invia_fa', 'includi_allegato', 'invia_copia', 'allega_pdf'];
+        $allowed = ['mail_mittente', 'mail_destinatario', 'oggetto', 'messaggio', 'id', 'token', 'includi_documento', 'invia_ddt', 'invia_fa', 'includi_allegato', 'invia_copia', 'allega_pdf'];
         $required = ['mail_mittente', 'mail_destinatario', 'oggetto', 'messaggio'];
 
         return Common::parseData($data, $allowed, $required);
