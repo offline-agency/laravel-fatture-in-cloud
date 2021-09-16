@@ -8,17 +8,16 @@ use Tests\TestCase;
 
 class AccountEntityTest extends TestCase
 {
-  public function test_country_list()
-  {
-    Http::fake([
-      'info/account' => Http::response($this->getHttpResponse('info.account.country'))
-    ]);
+    public function test_country_list()
+    {
+        Http::fake([
+            'info/account' => Http::response($this->getHttpResponse('info.account.country')),
+        ]);
 
-    $account = new Account();
-    $response = $account->getCountryList();
+        $account = new Account();
+        $response = $account->getCountryList();
 
-    $this->assertIsArray($response); // [] string
+        $this->assertIsArray($response); // [] string
     $this->assertIsString($response[0]); // Afghanistan
-  }
-
+    }
 }

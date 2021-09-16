@@ -1,16 +1,15 @@
 <?php
 
-
 namespace OfflineAgency\FattureInCloud\Requests;
-
 
 use Exception;
 
 class Corrispettivi
 {
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function lista(array $data)
@@ -23,8 +22,9 @@ class Corrispettivi
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function dettagli(array $data)
@@ -37,8 +37,9 @@ class Corrispettivi
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function nuovo(array $data)
@@ -51,8 +52,9 @@ class Corrispettivi
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function modifica(array $data)
@@ -65,8 +67,9 @@ class Corrispettivi
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function elimina(array $data)
@@ -79,8 +82,9 @@ class Corrispettivi
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function info(array $data)
@@ -91,5 +95,4 @@ class Corrispettivi
 
         return Common::parseData($data, $allowed, $required);
     }
-
 }
