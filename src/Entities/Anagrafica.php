@@ -10,8 +10,7 @@ class Anagrafica extends FattureInCloud
     protected $soggetto = 'clienti';
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function lista($data = [])
@@ -22,8 +21,7 @@ class Anagrafica extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function nuovo($data = [])
@@ -34,11 +32,10 @@ class Anagrafica extends FattureInCloud
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return mixed|string
      *
      * @throws \Exception
-     *
-     * @return mixed|string
      */
     public function importa($data = [])
     {
@@ -48,8 +45,7 @@ class Anagrafica extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function modifica($data = [])
@@ -60,8 +56,7 @@ class Anagrafica extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function elimina($data = [])

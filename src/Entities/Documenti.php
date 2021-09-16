@@ -10,8 +10,7 @@ class Documenti extends FattureInCloud
     protected $docType = 'fatture';
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function lista($data = [])
@@ -22,8 +21,7 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function dettagli($data = [])
@@ -34,8 +32,7 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function nuovo($data = [])
@@ -46,8 +43,7 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function modifica($data = [])
@@ -58,8 +54,7 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function elimina($data = [])
@@ -70,8 +65,7 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function info($data = [])
@@ -82,8 +76,9 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array|mixed|object|string
+     *
      * @throws \Exception
      */
     public function infoMail($data = [])
@@ -94,8 +89,9 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array|mixed|object|string
+     *
      * @throws \Exception
      */
     public function inviaMail($data = [])

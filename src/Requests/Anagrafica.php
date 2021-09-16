@@ -5,8 +5,7 @@ namespace OfflineAgency\FattureInCloud\Requests;
 class Anagrafica
 {
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      */
     public static function lista($data = [])
@@ -19,8 +18,7 @@ class Anagrafica
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      */
     public static function nuovo($data = [])
@@ -37,12 +35,11 @@ class Anagrafica
     }
 
     /**
-     * @param       $type singolo, lista
-     * @param array $data
+     * @param  $type  singolo, lista
+     * @param  array  $data
+     * @return array
      *
      * @throws \Exception
-     *
-     * @return array
      */
     public static function importa($type, $data = [])
     {
@@ -62,8 +59,7 @@ class Anagrafica
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      */
     public static function modifica($data = [])
@@ -80,8 +76,7 @@ class Anagrafica
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      */
     public static function elimina($data = [])
