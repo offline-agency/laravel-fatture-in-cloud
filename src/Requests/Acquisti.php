@@ -5,8 +5,7 @@ namespace OfflineAgency\FattureInCloud\Requests;
 class Acquisti
 {
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      */
     public static function lista($data = [])
@@ -19,8 +18,7 @@ class Acquisti
     }
 
     /**
-     * @param array $data
-     *
+     * @param  array  $data
      * @return array
      */
     public static function dettagli($data = [])

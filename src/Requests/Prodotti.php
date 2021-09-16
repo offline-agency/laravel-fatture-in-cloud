@@ -7,11 +7,10 @@ use Exception;
 class Prodotti
 {
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function lista($data = [])
     {
@@ -23,11 +22,10 @@ class Prodotti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function nuovo($data = [])
     {
@@ -41,11 +39,10 @@ class Prodotti
 
     /**
      * @param $type
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function importa($type, $data = [])
     {
@@ -62,11 +59,10 @@ class Prodotti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws \Exception
-     *
-     * @return array
      */
     public static function modifica($data = [])
     {
@@ -78,11 +74,10 @@ class Prodotti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function elimina($data = [])
     {
