@@ -2,29 +2,28 @@
 
 namespace Tests;
 
-
-use Orchestra\Testbench\TestCase as BaseTestCase;
 use OfflineAgency\FattureInCloud\FattureInCloudServiceProvider;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-  use CreatesApplication;
+    use CreatesApplication;
 
-  protected function getPackageProviders($app)
-  {
-    return [
-      FattureInCloudServiceProvider::class
-    ];
-  }
+    protected function getPackageProviders($app)
+    {
+        return [
+            FattureInCloudServiceProvider::class,
+        ];
+    }
 
-  public function setUp(): void
-  {
-    parent::setUp();
-  }
+    public function setUp(): void
+    {
+        parent::setUp();
+    }
 
-  protected function getEnvironmentSetUp($app)
-  {
-    $app['config']->set('fatture-in-cloud.api_uid', 'fake_uid');
-    $app['config']->set('fatture-in-cloud.api_key', 'fake_api_key');
-  }
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('fatture-in-cloud.api_uid', 'fake_uid');
+        $app['config']->set('fatture-in-cloud.api_key', 'fake_api_key');
+    }
 }
