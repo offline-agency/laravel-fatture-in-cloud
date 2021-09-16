@@ -82,7 +82,7 @@ class Account extends FattureInCloud
     $data = [
       'campi' => 'lista_paesi'
     ];
-    return $this->getInfo($data);
+    return $this->getInfo($data)['lista_paesi'];
   }
 
   /**
