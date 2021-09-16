@@ -657,5 +657,13 @@ class AccountFakeResponse
     ]);
   }
 
+  public function getLicenceType()
+  {
+    return json_encode([
+      'tipo_licenza' => 'prova',
+      'success' => true,
+    ]);
+  }
+
 
 }
