@@ -7,11 +7,10 @@ use Exception;
 class Documenti
 {
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function lista($data = [])
     {
@@ -24,11 +23,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function dettagli($data = [])
     {
@@ -39,11 +37,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function nuovo($data = [])
     {
@@ -63,11 +60,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function modifica($data = [])
     {
@@ -86,11 +82,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function elimina($data = [])
     {
@@ -101,11 +96,10 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function info($data = [])
     {
@@ -116,8 +110,9 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function infoMail($data = [])
@@ -129,8 +124,9 @@ class Documenti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function inviaMail($data = [])

@@ -12,8 +12,8 @@ class Auth
     /**
      * Auth constructor.
      *
-     * @param string $apiUid
-     * @param string $apiKey
+     * @param  string  $apiUid
+     * @param  string  $apiKey
      *
      * @throws Exception
      */
@@ -34,10 +34,9 @@ class Auth
     /**
      * Exec API call.
      *
-     * @param string $url
-     * @param array  $data
-     * @param string $method
-     *
+     * @param  string  $url
+     * @param  array  $data
+     * @param  string  $method
      * @return array|mixed
      */
     private function call($url = '', $data = [], $method = 'post')
@@ -70,10 +69,9 @@ class Auth
      * Parse response.
      *
      * @param $response
+     * @return mixed
      *
      * @throws Exception
-     *
-     * @return mixed
      */
     private function parseResponse($response)
     {
@@ -89,8 +87,7 @@ class Auth
      * POST call.
      *
      * @param $path
-     * @param array $data
-     *
+     * @param  array  $data
      * @return mixed|string
      */
     public function post($path, $data = [])

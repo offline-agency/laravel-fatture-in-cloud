@@ -7,11 +7,10 @@ use Exception;
 class Mail
 {
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function lista($data = [])
     {
