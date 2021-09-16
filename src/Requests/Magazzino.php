@@ -1,8 +1,6 @@
 <?php
 
-
 namespace OfflineAgency\FattureInCloud\Requests;
-
 
 use Exception;
 
@@ -18,8 +16,9 @@ class Magazzino
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function dettagli(array $data)
@@ -32,8 +31,9 @@ class Magazzino
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function nuovo(array $data)
@@ -46,8 +46,9 @@ class Magazzino
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function modifica(array $data)
@@ -60,8 +61,9 @@ class Magazzino
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function elimina(array $data)
@@ -74,8 +76,9 @@ class Magazzino
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function info(array $data)
