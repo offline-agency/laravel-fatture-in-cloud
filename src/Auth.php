@@ -46,19 +46,20 @@ class Auth
         try {
             $url = config('fatture-in-cloud.endpoint').$url;
             $method = Str::lower($method);
-            if($method === 'post'){
-              $result = Http::withHeaders([
-                "Content-type" => 'text/json'
-              ])
-                ->post($url,$data );
-            }else if($method === 'get'){
-              $result = Http::withHeaders([
-                "Content-type" => 'text/json'
-              ])
-                ->get($url,$data );
-            }else{
-              throw new Exception('Unknown method ' . $method);
+            if ($method === 'post') {
+                $result = Http::withHeaders([
+                    'Content-type' => 'text/json',
+                ])
+                ->post($url, $data);
+            } elseif ($method === 'get') {
+                $result = Http::withHeaders([
+                    'Content-type' => 'text/json',
+                ])
+                ->get($url, $data);
+            } else {
+                throw new Exception('Unknown method '.$method);
             }
+
             return $result->json();
         } catch (Exception $e) {
             return (object) [

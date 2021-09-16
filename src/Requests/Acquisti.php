@@ -9,11 +9,12 @@ class Acquisti
     /**
      * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function lista($data = [])
     {
-        $allowed = ['anno', 'tipo', 'data_inizio', 'data_fine', 'fornitore', 'id_fornitore', 'saldato','mostra_link_allegato'];
+        $allowed = ['anno', 'tipo', 'data_inizio', 'data_fine', 'fornitore', 'id_fornitore', 'saldato', 'mostra_link_allegato'];
 
         $required = ['anno'];
 
@@ -23,6 +24,7 @@ class Acquisti
     /**
      * @param  array  $data
      * @return array
+     *
      * @throws Exception
      */
     public static function dettagli($data = [])
