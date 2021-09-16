@@ -42,18 +42,6 @@ class Account extends FattureInCloud
   }
 
   /**
-   * @param array $data
-   *
-   * @return mixed|string
-   */
-  public function getInfo($data = ['nome'])
-  {
-    Request::info($data);
-
-    return $this->auth->post('info/account', $data);
-  }
-
-  /**
    * @return mixed|string
    */
   public function getLicenceType()
@@ -129,5 +117,4 @@ class Account extends FattureInCloud
     ];
     return $this->getInfo($data);
   }
-}
 }
