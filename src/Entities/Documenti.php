@@ -80,4 +80,28 @@ class Documenti extends FattureInCloud
 
         return $this->auth->post("{$this->docType}/info", $data);
     }
+
+    /**
+     * @param array $data
+     * @return array|mixed|object|string
+     * @throws \Exception
+     */
+    public function infoMail($data = [])
+    {
+        Request::infoMail($data);
+
+        return $this->auth->post("{$this->docType}/infomail", $data);
+    }
+
+    /**
+     * @param array $data
+     * @return array|mixed|object|string
+     * @throws \Exception
+     */
+    public function inviaMail($data = [])
+    {
+        Request::inviaMail($data);
+
+        return $this->auth->post("{$this->docType}/inviamail", $data);
+    }
 }
