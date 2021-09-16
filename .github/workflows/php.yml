@@ -2,8 +2,7 @@ name: CI
 
 on:
   push:
-    branches:
-    tags:
+
   pull_request:
 
 jobs:
@@ -11,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        php: ['7.2', '7.3', '7.4', '8.0']
+        php: ['7.3', '7.4', '8.0']
         os: ['ubuntu-latest']
 
     name: PHP v${{ matrix.php }}
