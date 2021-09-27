@@ -1,17 +1,15 @@
 name: CI
 
 on:
-  push:
-    branches:
-    tags:
   pull_request:
+    branches:
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        php: ['7.2', '7.3', '7.4', '8.0']
+        php: ['7.3', '7.4', '8.0']
         os: ['ubuntu-latest']
 
     name: PHP v${{ matrix.php }}
@@ -41,3 +39,7 @@ jobs:
     - name: Run tests
       run: |
         ./vendor/bin/phpunit --coverage-clover coverage.xml
+    - uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: false
