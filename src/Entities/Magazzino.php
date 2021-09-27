@@ -8,29 +8,29 @@ use OfflineAgency\FattureInCloud\Requests\Magazzino as Request;
 
 class Magazzino extends FattureInCloud
 {
-  /**
-   * @param  array  $data
-   * @return mixed|string
-   *
-   * @throws Exception
-   */
-  public function lista($data = [])
-  {
-    Request::lista($data);
+    /**
+     * @param  array  $data
+     * @return mixed|string
+     *
+     * @throws Exception
+     */
+    public function lista($data = [])
+    {
+        Request::lista($data);
 
-    return $this->auth->post('arrivimerce/lista', $data);
-  }
+        return $this->auth->post('arrivimerce/lista', $data);
+    }
 
-  /**
-   * @param  array  $data
-   * @return mixed|string
-   *
-   * @throws Exception
-   */
-  public function dettagli($data = [])
-  {
-    Request::dettagli($data);
+    /**
+     * @param  array  $data
+     * @return mixed|string
+     *
+     * @throws Exception
+     */
+    public function dettagli($data = [])
+    {
+        Request::dettagli($data);
 
-    return $this->auth->post('arrivimerce/dettaglio', $data);
-  }
+        return $this->auth->post('arrivimerce/dettaglio', $data);
+    }
 }

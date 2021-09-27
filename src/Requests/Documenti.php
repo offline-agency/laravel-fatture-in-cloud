@@ -14,7 +14,7 @@ class Documenti
      */
     public static function lista($data = [])
     {
-        $allowed = ['anno', 'data_inizio', 'data_fine', 'cliente', 'fornitore', 'id_fornitore', 'id_cliente', 'saldato', 'oggetto', 'ogni_ddt', 'PA_tipo_cliente', 'PA', 'pagina', ];
+        $allowed = ['anno', 'data_inizio', 'data_fine', 'cliente', 'fornitore', 'id_fornitore', 'id_cliente', 'saldato', 'oggetto', 'ogni_ddt', 'PA_tipo_cliente', 'PA', 'pagina'];
 
         $required = ['anno'];
 
