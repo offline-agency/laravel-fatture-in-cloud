@@ -11,322 +11,322 @@ class AccountFakeResponse
     {
         return json_encode([
             'lista_valute' => [
-                  0 => [
-                        'codice' => 'AED',
-                        'simbolo' => 'AED',
-                        'cambio' => '4.32170',
-                    ],
-                  1 => [
-                        'codice' => 'ALL',
-                        'simbolo' => 'ALL',
-                        'cambio' => '118.40000',
-                    ],
-                  2 => [
-                        'codice' => 'ARS',
-                        'simbolo' => '$',
-                        'cambio' => '115.90550',
-                    ],
-                  3 => [
-                        'codice' => 'AUD',
-                        'simbolo' => 'AUD',
-                        'cambio' => '1.61314',
-                    ],
-                  4 => [
-                        'codice' => 'AZN',
-                        'simbolo' => 'AZN',
-                        'cambio' => '2.00130',
-                    ],
-                  5 => [
-                        'codice' => 'BGN',
-                        'simbolo' => 'лв',
-                        'cambio' => '1.95583',
-                    ],
-                  6 => [
-                        'codice' => 'BRL',
-                        'simbolo' => 'R$',
-                        'cambio' => '6.20280',
-                    ],
-                  7 => [
-                        'codice' => 'BYN',
-                        'simbolo' => 'BYN',
-                        'cambio' => '2.41000',
-                    ],
-                  8 => [
-                        'codice' => 'CAD',
-                        'simbolo' => 'CAD',
-                        'cambio' => '1.49226',
-                    ],
-                  9 => [
-                        'codice' => 'CFA',
-                        'simbolo' => 'CFA',
-                        'cambio' => '656.68000',
-                    ],
-                  10 => [
-                        'codice' => 'CHF',
-                        'simbolo' => 'Fr.',
-                        'cambio' => '1.09116',
-                    ],
-                  11 => [
-                        'codice' => 'CNY',
-                        'simbolo' => 'CNY',
-                        'cambio' => '7.59890',
-                    ],
-                  12 => [
-                        'codice' => 'COP',
-                        'simbolo' => '$',
-                        'cambio' => '4483.66000',
-                    ],
-                  13 => [
-                        'codice' => 'CRC',
-                        'simbolo' => '₡',
-                        'cambio' => '739.88000',
-                    ],
-                  14 => [
-                        'codice' => 'CZK',
-                        'simbolo' => 'Kč',
-                        'cambio' => '25.30100',
-                    ],
-                  15 => [
-                        'codice' => 'DKK',
-                        'simbolo' => 'kr.',
-                        'cambio' => '7.43580',
-                    ],
-                  16 => [
-                        'codice' => 'DOP',
-                        'simbolo' => 'DOP',
-                        'cambio' => '67.04500',
-                    ],
-                  17 => [
-                        'codice' => 'DZD',
-                        'simbolo' => 'DZD',
-                        'cambio' => '159.33200',
-                    ],
-                  18 => [
-                        'codice' => 'EGP',
-                        'simbolo' => 'EGP',
-                        'cambio' => '18.55970',
-                    ],
-                  19 => [
-                        'codice' => 'EUR',
-                        'simbolo' => '€',
-                        'cambio' => '1.00000',
-                    ],
-                  20 => [
-                        'codice' => 'GBP',
-                        'simbolo' => '£',
-                        'cambio' => '0.85292',
-                    ],
-                  21 => [
-                        'codice' => 'GHS',
-                        'simbolo' => 'GHS',
-                        'cambio' => '5.45834',
-                    ],
-                  22 => [
-                        'codice' => 'GTQ',
-                        'simbolo' => 'Q',
-                        'cambio' => '9.12300',
-                    ],
-                  23 => [
-                        'codice' => 'HKD',
-                        'simbolo' => 'HK$',
-                        'cambio' => '9.15551',
-                    ],
-                  24 => [
-                        'codice' => 'HRK',
-                        'simbolo' => 'HRK',
-                        'cambio' => '7.48050',
-                    ],
-                  25 => [
-                        'codice' => 'HUF',
-                        'simbolo' => 'HUF',
-                        'cambio' => '350.60000',
-                    ],
-                  26 => [
-                        'codice' => 'ILS',
-                        'simbolo' => '₪',
-                        'cambio' => '3.77860',
-                    ],
-                  27 => [
-                        'codice' => 'INR',
-                        'simbolo' => 'INR',
-                        'cambio' => '86.86690',
-                    ],
-                  28 => [
-                        'codice' => 'ISK',
-                        'simbolo' => 'ISK',
-                        'cambio' => '149.74300',
-                    ],
-                  29 => [
-                        'codice' => 'JPY',
-                        'simbolo' => '¥',
-                        'cambio' => '129.12000',
-                    ],
-                  30 => [
-                        'codice' => 'KES',
-                        'simbolo' => 'KSh',
-                        'cambio' => '129.89400',
-                    ],
-                  31 => [
-                        'codice' => 'KRW',
-                        'simbolo' => 'KRW',
-                        'cambio' => '1382.40000',
-                    ],
-                  32 => [
-                        'codice' => 'LKR',
-                        'simbolo' => 'LKR',
-                        'cambio' => '235.82200',
-                    ],
-                  33 => [
-                        'codice' => 'MAD',
-                        'simbolo' => 'MAD',
-                        'cambio' => '10.54700',
-                    ],
-                  34 => [
-                        'codice' => 'MKD',
-                        'simbolo' => 'MKD',
-                        'cambio' => '61.57200',
-                    ],
-                  35 => [
-                        'codice' => 'MXN',
-                        'simbolo' => 'Mex$',
-                        'cambio' => '23.46620',
-                    ],
-                  36 => [
-                        'codice' => 'MYR',
-                        'simbolo' => 'MYR',
-                        'cambio' => '4.91540',
-                    ],
-                  37 => [
-                        'codice' => 'NGN',
-                        'simbolo' => 'NGN',
-                        'cambio' => '486.28000',
-                    ],
-                  38 => [
-                        'codice' => 'NIS',
-                        'simbolo' => 'NIS',
-                        'cambio' => '4020.00000',
-                    ],
-                  39 => [
-                        'codice' => 'NOK',
-                        'simbolo' => 'kr',
-                        'cambio' => '10.13090',
-                    ],
-                  40 => [
-                        'codice' => 'NZD',
-                        'simbolo' => 'NZD',
-                        'cambio' => '1.66334',
-                    ],
-                  41 => [
-                        'codice' => 'OMR',
-                        'simbolo' => 'OMR',
-                        'cambio' => '0.45508',
-                    ],
-                  42 => [
-                        'codice' => 'PEN',
-                        'simbolo' => 'PEN',
-                        'cambio' => '4.84770',
-                    ],
-                  43 => [
-                        'codice' => 'PHP',
-                        'simbolo' => '₱',
-                        'cambio' => '58.80900',
-                    ],
-                  44 => [
-                        'codice' => 'PLN',
-                        'simbolo' => 'zł',
-                        'cambio' => '4.56890',
-                    ],
-                  45 => [
-                        'codice' => 'QAR',
-                        'simbolo' => 'QAR',
-                        'cambio' => '4.30200',
-                    ],
-                  46 => [
-                        'codice' => 'RON',
-                        'simbolo' => 'RON',
-                        'cambio' => '4.66891',
-                    ],
-                  47 => [
-                        'codice' => 'RSD',
-                        'simbolo' => 'RSD',
-                        'cambio' => '117.39414',
-                    ],
-                  48 => [
-                        'codice' => 'RUB',
-                        'simbolo' => '₽',
-                        'cambio' => '85.34200',
-                    ],
-                  49 => [
-                        'codice' => 'SAR',
-                        'simbolo' => 'SAR',
-                        'cambio' => '4.41230',
-                    ],
-                  50 => [
-                        'codice' => 'SCR',
-                        'simbolo' => '$',
-                        'cambio' => '17.04600',
-                    ],
-                  51 => [
-                        'codice' => 'SEK',
-                        'simbolo' => 'SEK',
-                        'cambio' => '10.14130',
-                    ],
-                  52 => [
-                        'codice' => 'SGD',
-                        'simbolo' => 'SGD',
-                        'cambio' => '1.58210',
-                    ],
-                  53 => [
-                        'codice' => 'SR',
-                        'simbolo' => '$',
-                        'cambio' => '0.00000',
-                    ],
-                  54 => [
-                        'codice' => 'THB',
-                        'simbolo' => 'THB',
-                        'cambio' => '38.93900',
-                    ],
-                  55 => [
-                        'codice' => 'TND',
-                        'simbolo' => 'TND',
-                        'cambio' => '3.29840',
-                    ],
-                  56 => [
-                        'codice' => 'TRY',
-                        'simbolo' => 'TRY',
-                        'cambio' => '10.02980',
-                    ],
-                  57 => [
-                        'codice' => 'TWD',
-                        'simbolo' => 'TWD',
-                        'cambio' => '32.70200',
-                    ],
-                  58 => [
-                        'codice' => 'TZS',
-                        'simbolo' => '$',
-                        'cambio' => '2739.25000',
-                    ],
-                  59 => [
-                        'codice' => 'UAH',
-                        'simbolo' => 'UAH',
-                        'cambio' => '31.63010',
-                    ],
-                  60 => [
-                        'codice' => 'USD',
-                        'simbolo' => '$',
-                        'cambio' => '1.17702',
-                    ],
-                  61 => [
-                        'codice' => 'VND',
-                        'simbolo' => '₫',
-                        'cambio' => '26887.00000',
-                    ],
-                  62 => [
-                        'codice' => 'ZAR',
-                        'simbolo' => 'R',
-                        'cambio' => '17.14150',
-                    ],
-              ],
+                0 => [
+                    'codice' => 'AED',
+                    'simbolo' => 'AED',
+                    'cambio' => '4.32170',
+                ],
+                1 => [
+                    'codice' => 'ALL',
+                    'simbolo' => 'ALL',
+                    'cambio' => '118.40000',
+                ],
+                2 => [
+                    'codice' => 'ARS',
+                    'simbolo' => '$',
+                    'cambio' => '115.90550',
+                ],
+                3 => [
+                    'codice' => 'AUD',
+                    'simbolo' => 'AUD',
+                    'cambio' => '1.61314',
+                ],
+                4 => [
+                    'codice' => 'AZN',
+                    'simbolo' => 'AZN',
+                    'cambio' => '2.00130',
+                ],
+                5 => [
+                    'codice' => 'BGN',
+                    'simbolo' => 'лв',
+                    'cambio' => '1.95583',
+                ],
+                6 => [
+                    'codice' => 'BRL',
+                    'simbolo' => 'R$',
+                    'cambio' => '6.20280',
+                ],
+                7 => [
+                    'codice' => 'BYN',
+                    'simbolo' => 'BYN',
+                    'cambio' => '2.41000',
+                ],
+                8 => [
+                    'codice' => 'CAD',
+                    'simbolo' => 'CAD',
+                    'cambio' => '1.49226',
+                ],
+                9 => [
+                    'codice' => 'CFA',
+                    'simbolo' => 'CFA',
+                    'cambio' => '656.68000',
+                ],
+                10 => [
+                    'codice' => 'CHF',
+                    'simbolo' => 'Fr.',
+                    'cambio' => '1.09116',
+                ],
+                11 => [
+                    'codice' => 'CNY',
+                    'simbolo' => 'CNY',
+                    'cambio' => '7.59890',
+                ],
+                12 => [
+                    'codice' => 'COP',
+                    'simbolo' => '$',
+                    'cambio' => '4483.66000',
+                ],
+                13 => [
+                    'codice' => 'CRC',
+                    'simbolo' => '₡',
+                    'cambio' => '739.88000',
+                ],
+                14 => [
+                    'codice' => 'CZK',
+                    'simbolo' => 'Kč',
+                    'cambio' => '25.30100',
+                ],
+                15 => [
+                    'codice' => 'DKK',
+                    'simbolo' => 'kr.',
+                    'cambio' => '7.43580',
+                ],
+                16 => [
+                    'codice' => 'DOP',
+                    'simbolo' => 'DOP',
+                    'cambio' => '67.04500',
+                ],
+                17 => [
+                    'codice' => 'DZD',
+                    'simbolo' => 'DZD',
+                    'cambio' => '159.33200',
+                ],
+                18 => [
+                    'codice' => 'EGP',
+                    'simbolo' => 'EGP',
+                    'cambio' => '18.55970',
+                ],
+                19 => [
+                    'codice' => 'EUR',
+                    'simbolo' => '€',
+                    'cambio' => '1.00000',
+                ],
+                20 => [
+                    'codice' => 'GBP',
+                    'simbolo' => '£',
+                    'cambio' => '0.85292',
+                ],
+                21 => [
+                    'codice' => 'GHS',
+                    'simbolo' => 'GHS',
+                    'cambio' => '5.45834',
+                ],
+                22 => [
+                    'codice' => 'GTQ',
+                    'simbolo' => 'Q',
+                    'cambio' => '9.12300',
+                ],
+                23 => [
+                    'codice' => 'HKD',
+                    'simbolo' => 'HK$',
+                    'cambio' => '9.15551',
+                ],
+                24 => [
+                    'codice' => 'HRK',
+                    'simbolo' => 'HRK',
+                    'cambio' => '7.48050',
+                ],
+                25 => [
+                    'codice' => 'HUF',
+                    'simbolo' => 'HUF',
+                    'cambio' => '350.60000',
+                ],
+                26 => [
+                    'codice' => 'ILS',
+                    'simbolo' => '₪',
+                    'cambio' => '3.77860',
+                ],
+                27 => [
+                    'codice' => 'INR',
+                    'simbolo' => 'INR',
+                    'cambio' => '86.86690',
+                ],
+                28 => [
+                    'codice' => 'ISK',
+                    'simbolo' => 'ISK',
+                    'cambio' => '149.74300',
+                ],
+                29 => [
+                    'codice' => 'JPY',
+                    'simbolo' => '¥',
+                    'cambio' => '129.12000',
+                ],
+                30 => [
+                    'codice' => 'KES',
+                    'simbolo' => 'KSh',
+                    'cambio' => '129.89400',
+                ],
+                31 => [
+                    'codice' => 'KRW',
+                    'simbolo' => 'KRW',
+                    'cambio' => '1382.40000',
+                ],
+                32 => [
+                    'codice' => 'LKR',
+                    'simbolo' => 'LKR',
+                    'cambio' => '235.82200',
+                ],
+                33 => [
+                    'codice' => 'MAD',
+                    'simbolo' => 'MAD',
+                    'cambio' => '10.54700',
+                ],
+                34 => [
+                    'codice' => 'MKD',
+                    'simbolo' => 'MKD',
+                    'cambio' => '61.57200',
+                ],
+                35 => [
+                    'codice' => 'MXN',
+                    'simbolo' => 'Mex$',
+                    'cambio' => '23.46620',
+                ],
+                36 => [
+                    'codice' => 'MYR',
+                    'simbolo' => 'MYR',
+                    'cambio' => '4.91540',
+                ],
+                37 => [
+                    'codice' => 'NGN',
+                    'simbolo' => 'NGN',
+                    'cambio' => '486.28000',
+                ],
+                38 => [
+                    'codice' => 'NIS',
+                    'simbolo' => 'NIS',
+                    'cambio' => '4020.00000',
+                ],
+                39 => [
+                    'codice' => 'NOK',
+                    'simbolo' => 'kr',
+                    'cambio' => '10.13090',
+                ],
+                40 => [
+                    'codice' => 'NZD',
+                    'simbolo' => 'NZD',
+                    'cambio' => '1.66334',
+                ],
+                41 => [
+                    'codice' => 'OMR',
+                    'simbolo' => 'OMR',
+                    'cambio' => '0.45508',
+                ],
+                42 => [
+                    'codice' => 'PEN',
+                    'simbolo' => 'PEN',
+                    'cambio' => '4.84770',
+                ],
+                43 => [
+                    'codice' => 'PHP',
+                    'simbolo' => '₱',
+                    'cambio' => '58.80900',
+                ],
+                44 => [
+                    'codice' => 'PLN',
+                    'simbolo' => 'zł',
+                    'cambio' => '4.56890',
+                ],
+                45 => [
+                    'codice' => 'QAR',
+                    'simbolo' => 'QAR',
+                    'cambio' => '4.30200',
+                ],
+                46 => [
+                    'codice' => 'RON',
+                    'simbolo' => 'RON',
+                    'cambio' => '4.66891',
+                ],
+                47 => [
+                    'codice' => 'RSD',
+                    'simbolo' => 'RSD',
+                    'cambio' => '117.39414',
+                ],
+                48 => [
+                    'codice' => 'RUB',
+                    'simbolo' => '₽',
+                    'cambio' => '85.34200',
+                ],
+                49 => [
+                    'codice' => 'SAR',
+                    'simbolo' => 'SAR',
+                    'cambio' => '4.41230',
+                ],
+                50 => [
+                    'codice' => 'SCR',
+                    'simbolo' => '$',
+                    'cambio' => '17.04600',
+                ],
+                51 => [
+                    'codice' => 'SEK',
+                    'simbolo' => 'SEK',
+                    'cambio' => '10.14130',
+                ],
+                52 => [
+                    'codice' => 'SGD',
+                    'simbolo' => 'SGD',
+                    'cambio' => '1.58210',
+                ],
+                53 => [
+                    'codice' => 'SR',
+                    'simbolo' => '$',
+                    'cambio' => '0.00000',
+                ],
+                54 => [
+                    'codice' => 'THB',
+                    'simbolo' => 'THB',
+                    'cambio' => '38.93900',
+                ],
+                55 => [
+                    'codice' => 'TND',
+                    'simbolo' => 'TND',
+                    'cambio' => '3.29840',
+                ],
+                56 => [
+                    'codice' => 'TRY',
+                    'simbolo' => 'TRY',
+                    'cambio' => '10.02980',
+                ],
+                57 => [
+                    'codice' => 'TWD',
+                    'simbolo' => 'TWD',
+                    'cambio' => '32.70200',
+                ],
+                58 => [
+                    'codice' => 'TZS',
+                    'simbolo' => '$',
+                    'cambio' => '2739.25000',
+                ],
+                59 => [
+                    'codice' => 'UAH',
+                    'simbolo' => 'UAH',
+                    'cambio' => '31.63010',
+                ],
+                60 => [
+                    'codice' => 'USD',
+                    'simbolo' => '$',
+                    'cambio' => '1.17702',
+                ],
+                61 => [
+                    'codice' => 'VND',
+                    'simbolo' => '₫',
+                    'cambio' => '26887.00000',
+                ],
+                62 => [
+                    'codice' => 'ZAR',
+                    'simbolo' => 'R',
+                    'cambio' => '17.14150',
+                ],
+            ],
             'success' => true,
         ]);
     }
@@ -602,54 +602,51 @@ class AccountFakeResponse
 
     public function getLicenseDuration()
     {
-      return json_encode(
+        return json_encode(
         [
-          'tipo_licenza' => 'prova',
-          'success' => true,
+            'tipo_licenza' => 'prova',
+            'success' => true,
         ]
       );
     }
 
-  public function getPaymentMethodForPurchaseList()
-  {
-    return json_encode(
+    public function getPaymentMethodForPurchaseList()
+    {
+        return json_encode(
       [
-        'lista_metodi_pagamento' =>
-          [
-            0 =>
-              [
-                'id' => 153,
-                'nome_metodo' => 'Bonifico Bancario',
-                'campo1' => 'ISTITUTO BANCARIO',
-                'desc1' => 'BANCA SPA',
-                'campo2' => 'IBAN',
-                'desc2' => '',
-                'campo3' => '',
-                'desc3' => '',
-                'campo4' => '',
-                'desc4' => '',
-                'campo5' => '',
-                'desc5' => '',
-                'default' => true,
-              ],
-            1 =>
-              [
-                'id' => 160,
-                'nome_metodo' => 'Carta di credito',
-                'campo1' => '',
-                'desc1' => '',
-                'campo2' => '',
-                'desc2' => '',
-                'campo3' => '',
-                'desc3' => '',
-                'campo4' => '',
-                'desc4' => '',
-                'campo5' => '',
-                'desc5' => '',
-              ],
-          ],
-        'success' => true,
+          'lista_metodi_pagamento' => [
+                0 => [
+                      'id' => 153,
+                      'nome_metodo' => 'Bonifico Bancario',
+                      'campo1' => 'ISTITUTO BANCARIO',
+                      'desc1' => 'BANCA SPA',
+                      'campo2' => 'IBAN',
+                      'desc2' => '',
+                      'campo3' => '',
+                      'desc3' => '',
+                      'campo4' => '',
+                      'desc4' => '',
+                      'campo5' => '',
+                      'desc5' => '',
+                      'default' => true,
+                  ],
+                1 => [
+                      'id' => 160,
+                      'nome_metodo' => 'Carta di credito',
+                      'campo1' => '',
+                      'desc1' => '',
+                      'campo2' => '',
+                      'desc2' => '',
+                      'campo3' => '',
+                      'desc3' => '',
+                      'campo4' => '',
+                      'desc4' => '',
+                      'campo5' => '',
+                      'desc5' => '',
+                  ],
+            ],
+          'success' => true,
       ]
     );
-  }
+    }
 }
