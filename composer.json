@@ -20,7 +20,6 @@
     "ext-json": "*",
     "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
     "illuminate/container": "^5.8|^6.0|^7.0|^8.0",
-    "illuminate/database": "^5.8|^6.20|^7.0|^8.0",
     "illuminate/events": "^5.8|^6.0|^7.0|^8.0"
   },
   "require-dev": {
