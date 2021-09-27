@@ -29,7 +29,7 @@ class Prodotti
      */
     public static function nuovo($data = [])
     {
-        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale' ];
+        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale'];
 
         $required = ['nome'];
 
@@ -45,7 +45,7 @@ class Prodotti
      */
     public static function importa($type, $data = [])
     {
-        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale' ];
+        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale'];
 
         $required = ['nome'];
 
