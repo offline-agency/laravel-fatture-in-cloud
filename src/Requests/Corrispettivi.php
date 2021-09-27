@@ -14,24 +14,9 @@ class Corrispettivi
      */
     public static function lista(array $data)
     {
-        $allowed = [];
+        $allowed = ['anno', 'tipo', 'data_inizio', 'data_fine', 'id'];
 
-        $required = [];
-
-        return Common::parseData($data, $allowed, $required);
-    }
-
-    /**
-     * @param  array  $data
-     * @return array
-     *
-     * @throws Exception
-     */
-    public static function dettagli(array $data)
-    {
-        $allowed = [];
-
-        $required = [];
+        $required = ['anno'];
 
         return Common::parseData($data, $allowed, $required);
     }
@@ -44,9 +29,9 @@ class Corrispettivi
      */
     public static function nuovo(array $data)
     {
-        $allowed = [];
+        $allowed = ['tipo', 'data', 'protocollo_auto', 'protocollo', 'protocollo', 'desc', 'centro_ricavo', 'metodo', 'importi_ivati', 'lista_righe'];
 
-        $required = [];
+        $required = ['tipo'];
 
         return Common::parseData($data, $allowed, $required);
     }
@@ -59,9 +44,9 @@ class Corrispettivi
      */
     public static function modifica(array $data)
     {
-        $allowed = [];
+        $allowed = ['id', 'tipo', 'data', 'protocollo_auto', 'protocollo', 'protocollo', 'desc', 'centro_ricavo', 'metodo', 'importi_ivati', 'lista_righe'];
 
-        $required = [];
+        $required = ['id', 'tipo'];
 
         return Common::parseData($data, $allowed, $required);
     }
@@ -74,24 +59,9 @@ class Corrispettivi
      */
     public static function elimina(array $data)
     {
-        $allowed = [];
+        $allowed = ['id'];
 
-        $required = [];
-
-        return Common::parseData($data, $allowed, $required);
-    }
-
-    /**
-     * @param  array  $data
-     * @return array
-     *
-     * @throws Exception
-     */
-    public static function info(array $data)
-    {
-        $allowed = [];
-
-        $required = [];
+        $required = ['id'];
 
         return Common::parseData($data, $allowed, $required);
     }

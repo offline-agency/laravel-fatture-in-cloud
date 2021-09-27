@@ -8,9 +8,9 @@ class Magazzino
 {
     public static function lista(array $data)
     {
-        $allowed = [];
+        $allowed = ['anno', 'data_inizio', 'data_fine', 'fornitore', 'id_fornitore', 'mostra_link_allegato'];
 
-        $required = [];
+        $required = ['anno'];
 
         return Common::parseData($data, $allowed, $required);
     }
@@ -23,69 +23,9 @@ class Magazzino
      */
     public static function dettagli(array $data)
     {
-        $allowed = [];
+        $allowed = ['id'];
 
-        $required = [];
-
-        return Common::parseData($data, $allowed, $required);
-    }
-
-    /**
-     * @param  array  $data
-     * @return array
-     *
-     * @throws Exception
-     */
-    public static function nuovo(array $data)
-    {
-        $allowed = [];
-
-        $required = [];
-
-        return Common::parseData($data, $allowed, $required);
-    }
-
-    /**
-     * @param  array  $data
-     * @return array
-     *
-     * @throws Exception
-     */
-    public static function modifica(array $data)
-    {
-        $allowed = [];
-
-        $required = [];
-
-        return Common::parseData($data, $allowed, $required);
-    }
-
-    /**
-     * @param  array  $data
-     * @return array
-     *
-     * @throws Exception
-     */
-    public static function elimina(array $data)
-    {
-        $allowed = [];
-
-        $required = [];
-
-        return Common::parseData($data, $allowed, $required);
-    }
-
-    /**
-     * @param  array  $data
-     * @return array
-     *
-     * @throws Exception
-     */
-    public static function info(array $data)
-    {
-        $allowed = [];
-
-        $required = [];
+        $required = ['id'];
 
         return Common::parseData($data, $allowed, $required);
     }

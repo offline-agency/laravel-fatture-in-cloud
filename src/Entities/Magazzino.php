@@ -27,7 +27,7 @@ class Magazzino extends FattureInCloud
      *
      * @throws Exception
      */
-    public function dettaglio($data = [])
+    public function dettagli($data = [])
     {
         Request::dettagli($data);
 
