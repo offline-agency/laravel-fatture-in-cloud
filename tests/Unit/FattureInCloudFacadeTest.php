@@ -26,14 +26,14 @@ class FattureInCloudFacadeTest extends TestCase
         \FattureInCloud::test();
     }
 
-    public function getPackageProviders()
+    public function getPackageProviders($app)
     {
         return [
             FattureInCloudServiceProvider::class,
         ];
     }
 
-    public function getPackageAliases()
+    public function getPackageAliases($app)
     {
         return [
             'FattureInCloud' => FattureInCloudFacade::class,
