@@ -3,7 +3,6 @@
 namespace OfflineAgency\FattureInCloud\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
@@ -46,11 +45,6 @@ class DocumentRequestPerformed
         $this->setResponse(
             $response
         );
-    }
-
-    public function broadcastOn()
-    {
-        return new PrivateChannel('channel-name');
     }
 
     /* GETTERs AND SETTERs */
