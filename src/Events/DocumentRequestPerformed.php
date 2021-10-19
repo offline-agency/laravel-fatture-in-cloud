@@ -16,12 +16,14 @@ class DocumentRequestPerformed
     public $docType;
     public $method;
     public $request;
+    public $additional_info;
     public $response;
 
     public function __construct(
         string $docType,
         string $method,
         array  $request,
+        array  $additional_info,
         object $response
     )
     {
@@ -35,6 +37,10 @@ class DocumentRequestPerformed
 
         $this->setRequest(
             $request
+        );
+
+        $this->setAdditionalInfo(
+            $additional_info
         );
 
         $this->setResponse(
@@ -83,6 +89,18 @@ class DocumentRequestPerformed
     ): void
     {
         $this->request = $request;
+    }
+
+    public function getAdditionalInfo()
+    {
+        return $this->additional_info;
+    }
+
+    public function setAdditionalInfo(
+        $additional_info
+    ): void
+    {
+        $this->additional_info = $additional_info;
     }
 
     public function getResponse()

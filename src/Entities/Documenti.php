@@ -12,10 +12,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
-     *
-     * @return mixed|string
+     * @param array $additional_data
+     * @return array|mixed|object|string
      */
-    public function lista($data = [])
+    public function lista(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::lista($data);
 
@@ -25,6 +28,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'lista',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -33,10 +37,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
-     *
-     * @return mixed|string
+     * @param array $additional_data
+     * @return array|mixed|object|string
      */
-    public function dettagli($data = [])
+    public function dettagli(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::dettagli($data);
 
@@ -46,6 +53,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'dettagli',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -54,10 +62,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
-     *
-     * @return mixed|string
+     * @param array $additional_data
+     * @return array|mixed|object|string
      */
-    public function nuovo($data = [])
+    public function nuovo(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::nuovo($data);
 
@@ -67,6 +78,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'nuovo',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -75,10 +87,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
-     *
-     * @return mixed|string
+     * @param array $additional_data
+     * @return array|mixed|object|string
      */
-    public function modifica($data = [])
+    public function modifica(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::modifica($data);
 
@@ -88,6 +103,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'modifica',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -96,10 +112,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
-     *
-     * @return mixed|string
+     * @param array $additional_data
+     * @return array|mixed|object|string
      */
-    public function elimina($data = [])
+    public function elimina(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::elimina($data);
 
@@ -109,6 +128,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'elimina',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -117,10 +137,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
-     *
-     * @return mixed|string
+     * @param array $additional_data
+     * @return array|mixed|object|string
      */
-    public function info($data = [])
+    public function info(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::info($data);
 
@@ -130,6 +153,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'info',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -138,10 +162,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
+     * @param array $additional_data
      * @return array|mixed|object|string
-     * @throws \Exception
      */
-    public function infoMail($data = [])
+    public function infoMail(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::infoMail($data);
 
@@ -151,6 +178,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'infoMail',
             $data,
+            $additional_data,
             $response
         ));
 
@@ -159,10 +187,13 @@ class Documenti extends FattureInCloud
 
     /**
      * @param array $data
+     * @param array $additional_data
      * @return array|mixed|object|string
-     * @throws \Exception
      */
-    public function inviaMail($data = [])
+    public function inviaMail(
+        array $data = [],
+        array $additional_data = []
+    )
     {
         Request::inviaMail($data);
 
@@ -172,6 +203,7 @@ class Documenti extends FattureInCloud
             $this->docType,
             'inviaMail',
             $data,
+            $additional_data,
             $response
         ));
 
