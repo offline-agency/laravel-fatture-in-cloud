@@ -2,7 +2,6 @@
 
 namespace OfflineAgency\FattureInCloud\Entities;
 
-use OfflineAgency\FattureInCloud\Events\DocumentRequestPerformed;
 use OfflineAgency\FattureInCloud\FattureInCloud;
 use OfflineAgency\FattureInCloud\Requests\Documenti as Request;
 
@@ -22,17 +21,13 @@ class Documenti extends FattureInCloud
     {
         Request::lista($data);
 
-        $response = $this->auth->post("{$this->docType}/lista", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'lista',
+        return $this->auth->post(
+            "{$this->docType}/lista",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'lista',
+            $this->docType
+        );
     }
 
     /**
@@ -47,17 +42,13 @@ class Documenti extends FattureInCloud
     {
         Request::dettagli($data);
 
-        $response = $this->auth->post("{$this->docType}/dettagli", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'dettagli',
+        return $this->auth->post(
+            "{$this->docType}/dettagli",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'dettagli',
+            $this->docType
+        );
     }
 
     /**
@@ -72,17 +63,13 @@ class Documenti extends FattureInCloud
     {
         Request::nuovo($data);
 
-        $response = $this->auth->post("{$this->docType}/nuovo", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'nuovo',
+        return $this->auth->post(
+            "{$this->docType}/nuovo",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'nuovo',
+            $this->docType
+        );
     }
 
     /**
@@ -97,17 +84,13 @@ class Documenti extends FattureInCloud
     {
         Request::modifica($data);
 
-        $response = $this->auth->post("{$this->docType}/modifica", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'modifica',
+        return $this->auth->post(
+            "{$this->docType}/modifica",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'modifica',
+            $this->docType
+        );
     }
 
     /**
@@ -122,17 +105,13 @@ class Documenti extends FattureInCloud
     {
         Request::elimina($data);
 
-        $response = $this->auth->post("{$this->docType}/elimina", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'elimina',
+        return $this->auth->post(
+            "{$this->docType}/elimina",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'elimina',
+            $this->docType
+        );
     }
 
     /**
@@ -147,17 +126,13 @@ class Documenti extends FattureInCloud
     {
         Request::info($data);
 
-        $response = $this->auth->post("{$this->docType}/info", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'info',
+        return $this->auth->post(
+            "{$this->docType}/info",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'info',
+            $this->docType
+        );
     }
 
     /**
@@ -172,17 +147,13 @@ class Documenti extends FattureInCloud
     {
         Request::infoMail($data);
 
-        $response = $this->auth->post("{$this->docType}/infomail", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'infoMail',
+        return $this->auth->post(
+            "{$this->docType}/infomail",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'infoMail',
+            $this->docType
+        );
     }
 
     /**
@@ -197,16 +168,12 @@ class Documenti extends FattureInCloud
     {
         Request::inviaMail($data);
 
-        $response = $this->auth->post("{$this->docType}/inviamail", $data);
-
-        event(new DocumentRequestPerformed(
-            $this->docType,
-            'inviaMail',
+        return $this->auth->post(
+            "{$this->docType}/inviamail",
             $data,
             $additional_data,
-            $response
-        ));
-
-        return $response;
+            'inviaMail',
+            $this->docType
+        );
     }
 }

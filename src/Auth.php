@@ -170,16 +170,28 @@ class Auth
         $split_error_message = explode('Attendi ', $error_message);
         if (count($split_error_message) > 1) {
             $split_error_message = explode(' secondi', $split_error_message[1]);
-            $seconds =  (int)$split_error_message[0];
+            $seconds = (int)$split_error_message[0];
         }
         return $seconds * 1000;
     }
 
-    public function post($path, $data = [])
+    public function post(
+        $path,
+        $data = [],
+        $additional_data = [],
+        $action = '',
+        $type = ''
+    )
     {
         $params = array_merge($this->params, $data);
 
-        return $this->call($path, $params, 'POST');
+        return $this->call(
+            $path, $params,
+            'POST',
+            $additional_data,
+            $action,
+            $type
+        );
     }
 
     private function parseHeaders(
