@@ -17,13 +17,15 @@ class DocumentRequestPerformed
     public $request;
     public $additional_info;
     public $response;
+    public $response_header;
 
     public function __construct(
         string $docType,
         string $method,
         array  $request,
         array  $additional_info,
-        object $response
+        object $response,
+        array $response_header
     )
     {
         $this->setDocType(
@@ -44,6 +46,10 @@ class DocumentRequestPerformed
 
         $this->setResponse(
             $response
+        );
+
+        $this->setResponseHeader(
+            $response_header
         );
     }
 
@@ -107,5 +113,17 @@ class DocumentRequestPerformed
     ): void
     {
         $this->response = $response;
+    }
+
+    public function getResponseHeader()
+    {
+        return $this->response_header;
+    }
+
+    public function setResponseHeader(
+        $response_header
+    ): void
+    {
+        $this->response_header = $response_header;
     }
 }
