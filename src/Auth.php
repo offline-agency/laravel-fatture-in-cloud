@@ -109,7 +109,7 @@ class Auth
             isset($json->error)
             && isset($json->error_code)
         ) {
-            if ($json->error_code == 2007) {
+            if ($json->error_code == 2002) {
                 $this->handleThrottle(
                     $json,
                     $url,
