@@ -7,11 +7,10 @@ use Exception;
 class Prodotti
 {
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function lista($data = [])
     {
@@ -23,16 +22,14 @@ class Prodotti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function nuovo($data = [])
     {
-        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
-            'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
+        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale'];
 
         $required = ['nome'];
 
@@ -41,16 +38,14 @@ class Prodotti
 
     /**
      * @param $type
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function importa($type, $data = [])
     {
-        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
-            'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
+        $allowed = ['cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale'];
 
         $required = ['nome'];
 
@@ -62,27 +57,24 @@ class Prodotti
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws \Exception
-     *
-     * @return array
      */
     public static function modifica($data = [])
     {
-        $allowed = ['id', 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um',
-            'categoria', 'note', 'magazzino', 'giacenza_iniziale', ];
+        $allowed = ['id', 'cod', 'nome', 'desc', 'prezzo_ivato', 'prezzo_netto', 'prezzo_lordo', 'costo', 'cod_iva', 'um', 'categoria', 'note', 'magazzino', 'giacenza_iniziale'];
         $required = ['id'];
 
         return Common::parseData($data, $allowed, $required);
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
+     * @return array
      *
      * @throws Exception
-     *
-     * @return array
      */
     public static function elimina($data = [])
     {
