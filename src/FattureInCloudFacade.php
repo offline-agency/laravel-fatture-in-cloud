@@ -2,7 +2,9 @@
 
 namespace OfflineAgency\FattureInCloud;
 
-class FattureInCloudFacade extends \Illuminate\Support\Facades\Facade
+use Illuminate\Support\Facades\Facade;
+
+class FattureInCloudFacade extends Facade
 {
     public static function getFacadeAccessor()
     {

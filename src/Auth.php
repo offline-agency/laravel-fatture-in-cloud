@@ -10,9 +10,14 @@ class Auth
     private $attempts;
     private $params = [];
 
+    /**
+     * @param string $apiUid
+     * @param string $apiKey
+     * @throws Exception
+     */
     public function __construct(
-        $apiUid = '',
-        $apiKey = ''
+        string $apiUid = '',
+        string $apiKey = ''
     )
     {
         $this->attempts = 0;
@@ -27,13 +32,22 @@ class Auth
         ];
     }
 
+    /**
+     * @param string $url
+     * @param array $data
+     * @param string $method
+     * @param array $additional_data
+     * @param string $action
+     * @param string $type
+     * @return mixed|object
+     */
     private function call(
-        $url = '',
-        $data = [],
-        $method = 'post',
-        $additional_data = [],
-        $action = '',
-        $type = ''
+        string $url = '',
+        array  $data = [],
+        string $method = 'post',
+        array  $additional_data = [],
+        string $action = '',
+        string $type = ''
     )
     {
         try {
@@ -94,6 +108,17 @@ class Auth
         }
     }
 
+    /**
+     * @param $response
+     * @param $url
+     * @param $data
+     * @param $method
+     * @param $additional_data
+     * @param $action
+     * @param $type
+     * @return mixed
+     * @throws Exception
+     */
     private function parseResponse(
         $response,
         $url,
@@ -128,6 +153,16 @@ class Auth
         return $json;
     }
 
+    /**
+     * @param $json
+     * @param $url
+     * @param $data
+     * @param $method
+     * @param $additional_data
+     * @param $action
+     * @param $type
+     * @throws Exception
+     */
     private function handleThrottle(
         $json,
         $url,
@@ -163,6 +198,10 @@ class Auth
         }
     }
 
+    /**
+     * @param $error_message
+     * @return float|int
+     */
     private function getRetrySeconds(
         $error_message
     )
@@ -176,12 +215,20 @@ class Auth
         return $seconds * 1000;
     }
 
+    /**
+     * @param $path
+     * @param array $data
+     * @param array $additional_data
+     * @param string $action
+     * @param string $type
+     * @return mixed|object
+     */
     public function post(
         $path,
-        $data = [],
-        $additional_data = [],
-        $action = '',
-        $type = ''
+        array $data = [],
+        array $additional_data = [],
+        string $action = '',
+        string $type = ''
     )
     {
         $params = array_merge($this->params, $data);
@@ -195,6 +242,10 @@ class Auth
         );
     }
 
+    /**
+     * @param $headers
+     * @return array
+     */
     private function parseHeaders(
         $headers
     ): array
