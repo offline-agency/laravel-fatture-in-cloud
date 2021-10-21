@@ -50,4 +50,7 @@ return [
             'message' => 'Non è possibile completare la richiesta perché è stato raggiunto il limite massimo di anagrafiche.',
         ],
     ],
+    'timeout-errors-codes' => [
+        2002
+    ]
 ];

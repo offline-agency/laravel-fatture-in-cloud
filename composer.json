@@ -44,7 +44,7 @@
         "OfflineAgency\\FattureInCloud\\FattureInCloudServiceProvider"
       ],
       "aliases": {
-        "FattureInCloud": "GarbinLuca\\FattureInCloud\\FattureInCloudFacade"
+        "FattureInCloud": "OfflineAgency\\FattureInCloud\\FattureInCloudFacade"
       }
     }
   }
