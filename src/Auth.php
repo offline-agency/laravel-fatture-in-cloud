@@ -109,7 +109,8 @@ class Auth
             isset($json->error)
             && isset($json->error_code)
         ) {
-            if ($json->error_code == 2002) {
+            $timeout_errors_codes = config('fatture-in-cloud.timeout-errors-codes');
+            if (in_array($json->error_code, $timeout_errors_codes)) {
                 $this->handleThrottle(
                     $json,
                     $url,
