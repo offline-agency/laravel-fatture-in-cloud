@@ -12,15 +12,15 @@ class Auth
     private $params = [];
 
     /**
-     * @param string $apiUid
-     * @param string $apiKey
+     * @param  string  $apiUid
+     * @param  string  $apiKey
+     *
      * @throws Exception
      */
     public function __construct(
         string $apiUid = '',
         string $apiKey = ''
-    )
-    {
+    ) {
         $this->attempts = 0;
 
         if (empty($apiUid) || empty($apiKey)) {
@@ -34,25 +34,24 @@ class Auth
     }
 
     /**
-     * @param string $url
-     * @param array $data
-     * @param string $method
-     * @param array $additional_data
-     * @param string $action
-     * @param string $type
+     * @param  string  $url
+     * @param  array  $data
+     * @param  string  $method
+     * @param  array  $additional_data
+     * @param  string  $action
+     * @param  string  $type
      * @return mixed|object
      */
     private function call(
         string $url = '',
-        array  $data = [],
+        array $data = [],
         string $method = 'post',
-        array  $additional_data = [],
+        array $additional_data = [],
         string $action = '',
         string $type = ''
-    )
-    {
+    ) {
         try {
-            $url = config('fatture-in-cloud.endpoint') . $url;
+            $url = config('fatture-in-cloud.endpoint').$url;
 
             $options = [
                 'http' => [
@@ -116,7 +115,7 @@ class Auth
 
             return $response;
         } catch (Exception $e) {
-            $response = (object)[
+            $response = (object) [
                 'error' => $e->getMessage(),
                 'code' => $e->getCode(),
                 'success' => false,
@@ -131,7 +130,7 @@ class Auth
                 $this->parseHeaders($http_response_header)
             ));
 
-            return (object)[
+            return (object) [
                 'error' => $e->getMessage(),
                 'code' => $e->getCode(),
                 'success' => false,
@@ -148,6 +147,7 @@ class Auth
      * @param $action
      * @param $type
      * @return mixed
+     *
      * @throws Exception
      */
     private function parseResponse(
@@ -158,8 +158,7 @@ class Auth
         $additional_data,
         $action,
         $type
-    )
-    {
+    ) {
         $json = json_decode($response);
         if (
             isset($json->error)
@@ -192,6 +191,7 @@ class Auth
      * @param $additional_data
      * @param $action
      * @param $type
+     *
      * @throws Exception
      */
     private function handleThrottle(
@@ -202,8 +202,7 @@ class Auth
         $additional_data,
         $action,
         $type
-    )
-    {
+    ) {
         $attempts = $this->attempts;
         $times = config('fatture-in-cloud.times', 3);
 
@@ -235,23 +234,23 @@ class Auth
      */
     private function getRetrySeconds(
         $error_message
-    )
-    {
+    ) {
         $seconds = 0;
         $split_error_message = explode('Attendi ', $error_message);
         if (count($split_error_message) > 1) {
             $split_error_message = explode(' secondi', $split_error_message[1]);
-            $seconds = (int)$split_error_message[0];
+            $seconds = (int) $split_error_message[0];
         }
+
         return $seconds * 1000;
     }
 
     /**
      * @param $path
-     * @param array $data
-     * @param array $additional_data
-     * @param string $action
-     * @param string $type
+     * @param  array  $data
+     * @param  array  $additional_data
+     * @param  string  $action
+     * @param  string  $type
      * @return mixed|object
      */
     public function post(
@@ -260,8 +259,7 @@ class Auth
         array $additional_data = [],
         string $action = '',
         string $type = ''
-    )
-    {
+    ) {
         $params = array_merge($this->params, $data);
 
         return $this->call(
@@ -279,19 +277,20 @@ class Auth
      */
     private function parseHeaders(
         $headers
-    ): array
-    {
-        $head = array();
+    ): array {
+        $head = [];
         foreach ($headers as $k => $v) {
             $t = explode(':', $v, 2);
-            if (isset($t[1]))
+            if (isset($t[1])) {
                 $head[trim($t[0])] = trim($t[1]);
-            else {
+            } else {
                 $head[] = $v;
-                if (preg_match("#HTTP/[0-9\.]+\s+([0-9]+)#", $v, $out))
+                if (preg_match("#HTTP/[0-9\.]+\s+([0-9]+)#", $v, $out)) {
                     $head['reponse_code'] = intval($out[1]);
+                }
             }
         }
+
         return $head;
     }
 }

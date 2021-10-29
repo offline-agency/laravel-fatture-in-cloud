@@ -51,8 +51,8 @@ return [
         ],
     ],
     'timeout-errors-codes' => [
-        2002
+        2002,
     ],
     'times' => 3,
-    'sleep-seconds' => 5000000
+    'sleep-seconds' => 5000000,
 ];
