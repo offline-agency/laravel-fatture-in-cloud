@@ -3,6 +3,7 @@
 namespace OfflineAgency\FattureInCloud;
 
 use Exception;
+use Illuminate\Support\Arr;
 use OfflineAgency\FattureInCloud\Events\DocumentRequestPerformed;
 
 class Auth
@@ -64,6 +65,36 @@ class Auth
             $context = stream_context_create($options);
             $response = file_get_contents($url, false, $context);
 
+            $parsed_header = $this->parseHeaders(
+                $http_response_header
+            );
+
+            $response_code = Arr::has($parsed_header, 'reponse_code')
+                ? Arr::get($parsed_header, 'reponse_code')
+                : null;
+
+            $attempts = $this->attempts;
+            $times = config('fatture-in-cloud.times', 3);
+            if (
+                $attempts < $times
+                && $response_code == 404
+            ) {
+                $this->attempts++;
+
+                usleep(config('fatture-in-cloud.sleep-seconds', 5000000));
+
+                $this->call(
+                    $url,
+                    $data,
+                    $method,
+                    $additional_data,
+                    $action,
+                    $type
+                );
+            } else {
+                throw new \Exception('OA0002 - 404 on response');
+            }
+
             $response = $this->parseResponse(
                 $response,
                 $url,
@@ -80,7 +111,7 @@ class Auth
                 $data,
                 $additional_data,
                 $response,
-                $this->parseHeaders($http_response_header)
+                $parsed_header
             ));
 
             return $response;
@@ -174,7 +205,7 @@ class Auth
     )
     {
         $attempts = $this->attempts;
-        $times = config('nom.config', 3);
+        $times = config('fatture-in-cloud.times', 3);
 
         if ($attempts < $times) {
             $this->attempts++;
@@ -194,7 +225,7 @@ class Auth
                 $type
             );
         } else {
-            throw new \Exception('Timeout error', 'OA0001');
+            throw new \Exception('OA0001 - Timeout error');
         }
     }
 
