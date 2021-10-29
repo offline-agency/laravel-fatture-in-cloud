@@ -22,12 +22,11 @@ class DocumentRequestPerformed
     public function __construct(
         string $docType,
         string $method,
-        array  $request,
-        array  $additional_info,
+        array $request,
+        array $additional_info,
         object $response,
         array $response_header
-    )
-    {
+    ) {
         $this->setDocType(
             $docType
         );
@@ -62,8 +61,7 @@ class DocumentRequestPerformed
 
     public function setDocType(
         $docType
-    ): void
-    {
+    ): void {
         $this->docType = $docType;
     }
 
@@ -74,8 +72,7 @@ class DocumentRequestPerformed
 
     public function setMethod(
         $method
-    ): void
-    {
+    ): void {
         $this->method = $method;
     }
 
@@ -86,8 +83,7 @@ class DocumentRequestPerformed
 
     public function setRequest(
         $request
-    ): void
-    {
+    ): void {
         $this->request = $request;
     }
 
@@ -98,8 +94,7 @@ class DocumentRequestPerformed
 
     public function setAdditionalInfo(
         $additional_info
-    ): void
-    {
+    ): void {
         $this->additional_info = $additional_info;
     }
 
@@ -110,8 +105,7 @@ class DocumentRequestPerformed
 
     public function setResponse(
         $response
-    ): void
-    {
+    ): void {
         $this->response = $response;
     }
 
@@ -122,8 +116,7 @@ class DocumentRequestPerformed
 
     public function setResponseHeader(
         $response_header
-    ): void
-    {
+    ): void {
         $this->response_header = $response_header;
     }
 }
