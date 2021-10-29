@@ -10,15 +10,14 @@ class Documenti extends FattureInCloud
     protected $docType = 'fatture';
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function lista(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::lista($data);
 
         return $this->auth->post(
@@ -31,15 +30,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function dettagli(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::dettagli($data);
 
         return $this->auth->post(
@@ -52,15 +50,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function nuovo(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::nuovo($data);
 
         return $this->auth->post(
@@ -73,15 +70,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function modifica(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::modifica($data);
 
         return $this->auth->post(
@@ -94,15 +90,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function elimina(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::elimina($data);
 
         return $this->auth->post(
@@ -115,15 +110,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function info(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::info($data);
 
         return $this->auth->post(
@@ -136,15 +130,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function infoMail(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::infoMail($data);
 
         return $this->auth->post(
@@ -157,15 +150,14 @@ class Documenti extends FattureInCloud
     }
 
     /**
-     * @param array $data
-     * @param array $additional_data
+     * @param  array  $data
+     * @param  array  $additional_data
      * @return array|mixed|object|string
      */
     public function inviaMail(
         array $data = [],
         array $additional_data = []
-    )
-    {
+    ) {
         Request::inviaMail($data);
 
         return $this->auth->post(
