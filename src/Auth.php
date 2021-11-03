@@ -12,15 +12,16 @@ class Auth
     private $params = [];
 
     /**
-     * @param  string  $apiUid
-     * @param  string  $apiKey
+     * @param string $apiUid
+     * @param string $apiKey
      *
      * @throws Exception
      */
     public function __construct(
         string $apiUid = '',
         string $apiKey = ''
-    ) {
+    )
+    {
         $this->attempts = 0;
 
         if (empty($apiUid) || empty($apiKey)) {
@@ -34,24 +35,25 @@ class Auth
     }
 
     /**
-     * @param  string  $url
-     * @param  array  $data
-     * @param  string  $method
-     * @param  array  $additional_data
-     * @param  string  $action
-     * @param  string  $type
+     * @param string $url
+     * @param array $data
+     * @param string $method
+     * @param array $additional_data
+     * @param string $action
+     * @param string $type
      * @return mixed|object
      */
     private function call(
         string $url = '',
-        array $data = [],
+        array  $data = [],
         string $method = 'post',
-        array $additional_data = [],
+        array  $additional_data = [],
         string $action = '',
         string $type = ''
-    ) {
+    )
+    {
         try {
-            $full_url = config('fatture-in-cloud.endpoint').$url;
+            $full_url = config('fatture-in-cloud.endpoint') . $url;
 
             $options = [
                 'http' => [
@@ -89,7 +91,7 @@ class Auth
 
             return $response;
         } catch (Exception $e) {
-            $response = (object) [
+            $response = (object)[
                 'error' => $e->getMessage(),
                 'code' => $e->getCode(),
                 'success' => false,
@@ -104,7 +106,7 @@ class Auth
                 $this->parseHeaders($http_response_header)
             ));
 
-            return (object) [
+            return (object)[
                 'error' => $e->getMessage(),
                 'code' => $e->getCode(),
                 'success' => false,
@@ -120,8 +122,7 @@ class Auth
      * @param $additional_data
      * @param $action
      * @param $type
-     * @return mixed
-     *
+     * @return mixed|object
      * @throws Exception
      */
     private function parseResponse(
@@ -132,7 +133,8 @@ class Auth
         $additional_data,
         $action,
         $type
-    ) {
+    )
+    {
         $json = json_decode($response);
         if (
             isset($json->error)
@@ -140,7 +142,7 @@ class Auth
         ) {
             $timeout_errors_codes = config('fatture-in-cloud.timeout-errors-codes');
             if (in_array($json->error_code, $timeout_errors_codes)) {
-                $this->handleThrottle(
+                return $this->handleThrottle(
                     $json,
                     $url,
                     $data,
@@ -165,7 +167,7 @@ class Auth
      * @param $additional_data
      * @param $action
      * @param $type
-     *
+     * @return mixed|object
      * @throws Exception
      */
     private function handleThrottle(
@@ -176,7 +178,8 @@ class Auth
         $additional_data,
         $action,
         $type
-    ) {
+    )
+    {
         $attempts = $this->attempts;
         $times = config('fatture-in-cloud.times', 3);
 
@@ -189,7 +192,7 @@ class Auth
             $seconds = $seconds * 1000;
             usleep($seconds);
 
-            $this->call(
+            return $this->call(
                 $url,
                 $data,
                 $method,
@@ -208,12 +211,13 @@ class Auth
      */
     private function getRetrySeconds(
         $error_message
-    ) {
+    )
+    {
         $seconds = 0;
         $split_error_message = explode('Attendi ', $error_message);
         if (count($split_error_message) > 1) {
             $split_error_message = explode(' secondi', $split_error_message[1]);
-            $seconds = (int) $split_error_message[0];
+            $seconds = (int)$split_error_message[0];
         }
 
         return $seconds * 1000;
@@ -221,10 +225,10 @@ class Auth
 
     /**
      * @param $path
-     * @param  array  $data
-     * @param  array  $additional_data
-     * @param  string  $action
-     * @param  string  $type
+     * @param array $data
+     * @param array $additional_data
+     * @param string $action
+     * @param string $type
      * @return mixed|object
      */
     public function post(
@@ -233,7 +237,8 @@ class Auth
         array $additional_data = [],
         string $action = '',
         string $type = ''
-    ) {
+    )
+    {
         $params = array_merge($this->params, $data);
 
         return $this->call(
@@ -251,7 +256,8 @@ class Auth
      */
     private function parseHeaders(
         $headers
-    ): array {
+    ): array
+    {
         $head = [];
         foreach ($headers as $k => $v) {
             $t = explode(':', $v, 2);
