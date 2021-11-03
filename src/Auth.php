@@ -3,7 +3,6 @@
 namespace OfflineAgency\FattureInCloud;
 
 use Exception;
-use Illuminate\Support\Arr;
 use OfflineAgency\FattureInCloud\Events\DocumentRequestPerformed;
 
 class Auth
@@ -51,7 +50,7 @@ class Auth
         string $type = ''
     ) {
         try {
-            $url = config('fatture-in-cloud.endpoint').$url;
+            $full_url = config('fatture-in-cloud.endpoint').$url;
 
             $options = [
                 'http' => [
@@ -62,37 +61,11 @@ class Auth
             ];
 
             $context = stream_context_create($options);
-            $response = file_get_contents($url, false, $context);
+            $response = file_get_contents($full_url, false, $context);
 
             $parsed_header = $this->parseHeaders(
                 $http_response_header
             );
-
-            $response_code = Arr::has($parsed_header, 'reponse_code')
-                ? Arr::get($parsed_header, 'reponse_code')
-                : null;
-
-            $attempts = $this->attempts;
-            $times = config('fatture-in-cloud.times', 3);
-            if (
-                $attempts < $times
-                && $response_code == 404
-            ) {
-                $this->attempts++;
-
-                usleep(config('fatture-in-cloud.sleep-seconds', 5000000));
-
-                $this->call(
-                    $url,
-                    $data,
-                    $method,
-                    $additional_data,
-                    $action,
-                    $type
-                );
-            } else {
-                throw new \Exception('OA0002 - 404 on response');
-            }
 
             $response = $this->parseResponse(
                 $response,
@@ -146,7 +119,7 @@ class Auth
      * @param $additional_data
      * @param $action
      * @param $type
-     * @return mixed
+     * @return mixed|object
      *
      * @throws Exception
      */
@@ -166,7 +139,7 @@ class Auth
         ) {
             $timeout_errors_codes = config('fatture-in-cloud.timeout-errors-codes');
             if (in_array($json->error_code, $timeout_errors_codes)) {
-                $this->handleThrottle(
+                return $this->handleThrottle(
                     $json,
                     $url,
                     $data,
@@ -191,6 +164,7 @@ class Auth
      * @param $additional_data
      * @param $action
      * @param $type
+     * @return mixed|object
      *
      * @throws Exception
      */
@@ -215,7 +189,7 @@ class Auth
             $seconds = $seconds * 1000;
             usleep($seconds);
 
-            $this->call(
+            return $this->call(
                 $url,
                 $data,
                 $method,
