@@ -112,13 +112,13 @@ class Auth
     }
 
     /**
-     * @param $response
-     * @param $url
-     * @param $data
-     * @param $method
-     * @param $additional_data
-     * @param $action
-     * @param $type
+     * @param  $response
+     * @param  $url
+     * @param  $data
+     * @param  $method
+     * @param  $additional_data
+     * @param  $action
+     * @param  $type
      * @return mixed|object
      *
      * @throws Exception
@@ -157,13 +157,13 @@ class Auth
     }
 
     /**
-     * @param $json
-     * @param $url
-     * @param $data
-     * @param $method
-     * @param $additional_data
-     * @param $action
-     * @param $type
+     * @param  $json
+     * @param  $url
+     * @param  $data
+     * @param  $method
+     * @param  $additional_data
+     * @param  $action
+     * @param  $type
      * @return mixed|object
      *
      * @throws Exception
@@ -203,7 +203,7 @@ class Auth
     }
 
     /**
-     * @param $error_message
+     * @param  $error_message
      * @return float|int
      */
     private function getRetrySeconds(
@@ -220,7 +220,7 @@ class Auth
     }
 
     /**
-     * @param $path
+     * @param  $path
      * @param  array  $data
      * @param  array  $additional_data
      * @param  string  $action
@@ -246,7 +246,7 @@ class Auth
     }
 
     /**
-     * @param $headers
+     * @param  $headers
      * @return array
      */
     private function parseHeaders(
