@@ -37,7 +37,7 @@ class Prodotti
     }
 
     /**
-     * @param $type
+     * @param  $type
      * @param  array  $data
      * @return array
      *
